@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Portfólio Pessoal
 
-## Getting Started
+Este é o meu portfólio desenvolvido com **Next.js**, destacando meus projetos, habilidades e formas de contato. O site consome uma **API de envio de e-mails** para facilitar a comunicação.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js** - Framework React para renderização e otimização de páginas.
+- **React.js** - Biblioteca para construção da interface do usuário.
+- **Tailwind CSS** - Framework para estilização rápida e responsiva.
+- **Framer Motion** - Biblioteca para animações fluidas e interativas.
+- **Nodemailer** - Utilizado no backend para envio de emails.
+
+## 🌐 Demonstração
+
+Acesse meu portfólio online:
+👉 [Meu Portfólio](https://kaiquegeraldo.github.io/portifolio/)
+
+## 📌 Instalação e Execução Local
+
+1. Clone este repositório:
+
+   ```sh
+   git clone https://github.com/kaiqueGeraldo/portfolio.git
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```sh
+   cd portfolio
+   ```
+
+3. Instale as dependências:
+
+   ```sh
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```sh
+   npm run dev
+   ```
+
+5. Acesse **http://localhost:3000** no navegador.
+
+## 📬 API de Contato
+
+O portfólio integra uma API para envio de e-mails. O backend desta API está disponível aqui:
+👉 [Repositório da API](https://github.com/kaiqueGeraldo/backend-portifolio)
+
+**Como funciona o envio de e-mail?**
+
+O formulário de contato envia os dados preenchidos para a API através de uma requisição POST utilizando fetch. A API está hospedada no Railway e processa o envio do e-mail com nodemailer. Antes de submeter o formulário, há uma validação para garantir que todos os campos estejam preenchidos.
+
+Para configurar o envio de e-mails, defina a URL do servidor e faça o fetch:
+
+```sh
+const API_URL = "https://backend-portifolio.up.railway.app/enviar-email";
+
+const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+const data = await res.json();
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+/
+├── public/                  # Arquivos públicos (imagens, etc.)
+├── src/
+│   ├── app/                 # Diretório principal do Next.js
+│   │   ├── _components/      # Componentes reutilizáveis
+│   │   │   ├── about-me.tsx  # Seção "Sobre mim"
+│   │   │   ├── contactme.tsx # Formulário de contato
+│   │   │   ├── projects.tsx  # Seção de projetos
+│   │   │   ├── skills.tsx    # Seção de habilidades
+│   │   │   ├── footer.tsx    # Rodapé
+│   │   │   ├── hero.tsx      # Seção inicial (hero)
+│   │   │   ├── my-journey.tsx # Linha do tempo da minha jornada
+│   │   │   ├── final.tsx     # Seção final do portfólio
+│   │   │   ├── aos-init.tsx  # Inicialização de animações
+│   │   │   ├── smooth-scroll.js # Script para rolagem suave
+│   │   ├── data/             # Dados utilizados no portfólio
+│   │   │   ├── projects.ts   # Lista de projetos
+│   │   ├── projects/         # Páginas de projetos
+│   │   │   ├── page.tsx      # Página principal de projetos
+│   │   │   ├── loading.tsx   # Componente de carregamento
+│   │   ├── detail-project/   # Página de detalhes de um projeto
+│   │   │   ├── page.tsx      # Exibição detalhada do projeto
+│   │   │   ├── loading.tsx   # Componente de carregamento
+│   │   ├── utils/            # Funções utilitárias
+│   │   │   ├── floatingMenu.tsx   # Menu flutuante
+│   │   │   ├── idade.tsx   # Componente para o calculo da minha idade automática
+│   │   │   ├── scrollToTop.tsx   # Componente de scroll para o topo
+│   │   ├── layout.tsx        # Layout principal
+│   │   ├── not-found.tsx     # Página 404
+│   │   ├── page.tsx          # Página principal
+│   │   ├── globals.css       # Estilos globais
+├── .env.local                # Variáveis de ambiente
+├── next.config.js            # Configuração do Next.js
+├── package.json              # Dependências do projeto
+├── README.md                 # Documentação
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Recursos
 
-## Learn More
+- 💡 **Design Moderno** - Interface elegante e responsiva.
+- 🎬 **Animações Suaves** - Transições fluidas com Framer Motion.
+- 🔗 **Seção de Projetos** - Exibição interativa de trabalhos realizados.
+- 📧 **Formulário de Contato** - Integração com API para envio de emails.
+- 📱 **Responsivo** - Adaptado para desktop e mobile.
 
-To learn more about Next.js, take a look at the following resources:
+## 📝 Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. Sinta-se à vontade para utilizar e modificar conforme necessário. 😊
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feito com ❤️ por **Kaique Geraldo** - [LinkedIn](https://www.linkedin.com/in/kaique-geraldo) | [GitHub](https://github.com/kaiqueGeraldo) | [Email](mailto:kaiique2404@gmail.com)
