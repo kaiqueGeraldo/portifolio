@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
-import Linkedin from "../../../public/linkedin.svg";
-import Github from "../../../public/github.svg";
-import { Envelope } from "@phosphor-icons/react/dist/ssr";
-import DoubleArrow from "../../../public/ChevronDoubleDown.svg";
+import {
+  Envelope,
+  GithubLogo,
+  LinkedinLogo,
+} from "@phosphor-icons/react/dist/ssr";
+import DoubleArrow from "../../../public/ChevronDoubleDown.webp";
 import localFont from "next/font/local";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const minhaFonte = localFont({
   src: "../../../public/fonts/Colgent.ttf",
@@ -233,26 +236,26 @@ export function Hero() {
                 href="https://linkedin.com/in/kaique-geraldo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105"
+                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105 shadow-xl"
                 aria-label="LinkedIn"
                 animate={floatAnimation("up")}
               >
-                <Linkedin className="w-8 h-8" fill="currentColor" />
+                <LinkedinLogo className="w-8 h-8" fill="currentColor" />
               </motion.a>
               <motion.a
                 href="https://github.com/kaiqueGeraldo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105"
+                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105 shadow-xl"
                 aria-label="GitHub"
                 animate={floatAnimation("down")}
               >
-                <Github className="w-8 h-8" fill="currentColor" />
+                <GithubLogo className="w-8 h-8" fill="currentColor" />
               </motion.a>
               <motion.a
                 href="mailto:kaiique2404@gmail.com?subject=Contato%20via%20Portfólio&body=Olá%20Kaique,%20gostaria%20de%20falar%20sobre..."
                 target="_blank"
-                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105"
+                className="border-2 border-primary rounded-lg flex items-center justify-center p-3 hover:bg-primary text-primary hover:text-secondary transition-all duration-300 cursor-pointer hover:scale-105 shadow-xl"
                 aria-label="E-mail"
                 animate={floatAnimation("up")}
               >
@@ -262,7 +265,12 @@ export function Hero() {
           </motion.div>
 
           <motion.div className="mt-4 animate-bounce" variants={fadeInUp}>
-            <DoubleArrow />
+            <Image
+              src={DoubleArrow}
+              alt={"DoubleArrow"}
+              className="w-8 h-8"
+              style={{ fill: "currentcolor" }}
+            />
           </motion.div>
         </motion.div>
       </motion.div>
