@@ -90,10 +90,6 @@ export function Projects() {
                             quality={100}
                             width={24}
                             height={24}
-                            style={{
-                              width: "auto",
-                              height: "auto",
-                            }}
                             className="object-contain"
                           />
                         ))}
