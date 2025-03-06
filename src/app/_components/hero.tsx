@@ -213,8 +213,8 @@ export function Hero() {
               </div>
             )}
             <motion.a
-              href="/curriculo/Curriculo-Kaique.pdf"
-              download="Curriculo.pdf"
+              href="/curriculo/curriculo-kaique.pdf"
+              download="curriculo-kaique.pdf"
               className="py-3 px-6 bg-secondary/30 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/50 shadow-lg hover:scale-105 text-center"
               aria-label="Baixar meu CV"
               whileHover={{ scale: 1.1 }}
