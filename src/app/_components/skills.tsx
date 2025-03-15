@@ -181,7 +181,7 @@ export function Skills() {
               .map((skill, index) => (
                 <div
                   key={index}
-                  className="relative p-14 bg-white/20 shadow-md rounded-lg flex flex-col items-center transition-transform duration-500 overflow-hidden group select-none cursor-pointer"
+                  className="relative p-14 bg-white/10 shadow-md rounded-lg flex flex-col items-center transition-transform duration-500 overflow-hidden group select-none cursor-pointer"
                   onClick={() => toggleFlip(index)}
                   style={{ perspective: "1000px" }}
                   data-aos="zoom-in"
@@ -258,7 +258,7 @@ export function Skills() {
             {skills.slice(Math.ceil(skills.length / 2)).map((skill, index) => (
               <div
                 key={index + Math.ceil(skills.length / 2)}
-                className="relative p-14 bg-white/20 shadow-md rounded-lg flex flex-col items-center transition-transform duration-500 overflow-hidden group select-none cursor-pointer"
+                className="relative p-14 bg-white/10 shadow-md rounded-lg flex flex-col items-center transition-transform duration-500 overflow-hidden group select-none cursor-pointer"
                 onClick={() => toggleFlip(index + Math.ceil(skills.length / 2))}
                 style={{ perspective: "1000px" }}
                 data-aos="zoom-in"
@@ -341,7 +341,7 @@ export function Skills() {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="relative min-w-0 flex-[0_0_33.333%] p-14 bg-white/20 shadow-md rounded-lg flex flex-col items-center select-none transition-transform duration-500 overflow-hidden group"
+                className="relative min-w-0 flex-[0_0_33.333%] p-14 bg-white/10 shadow-md rounded-lg flex flex-col items-center select-none transition-transform duration-500 overflow-hidden group"
                 onClick={() => toggleFlip(index)}
                 style={{ perspective: "1000px" }}
               >

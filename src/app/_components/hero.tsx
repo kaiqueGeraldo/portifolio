@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Envelope,
   GithubLogo,
@@ -32,6 +32,7 @@ const staggerContainer = {
 export function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [altura, setAltura] = useState(0);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -49,24 +50,28 @@ export function Hero() {
     },
   });
 
+  useEffect(() => {
+    setAltura(window.innerHeight);
+  }, []);
+
   return (
     <motion.section
-      className="relative flex items-center justify-center lg:p-8 md:p-8 select-none"
+      className="relative flex items-center justify-center md:p-8 select-none"
       id="hero"
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
     >
       <motion.div
-        className="relative container w-full lg:h-[calc(100vh*0.90)] md:h-[calc(100vh*0.90)] flex flex-col items-center justify-center bg-white/20 backdrop-blur-lg md:rounded-3xl lg:rounded-3xl lg:p-16 rounded-b-3xl shadow-2xl border border-white/20 transition-all duration-300"
+        className={`relative container w-full md:h-[calc(100vh*0.90)] flex flex-col items-center justify-center bg-white/10 backdrop-blur-lg md:rounded-3xl rounded-b-3xl shadow-2xl border border-white/10 transition-all duration-300 ${
+          altura >= 900 ? "gap-6" : "gap-0"
+        }`}
         variants={staggerContainer}
       >
         <motion.header
-          className={`${minhaFonte.className} w-full flex justify-between items-center p-4`}
+          className={`${minhaFonte.className} w-full p-4`}
           variants={fadeInUp}
         >
-          <h2 className="text-4xl font-bold cursor-pointer">KG</h2>
-
           {/* Botão do menu hamburguer para mobile */}
           <button
             className="lg:hidden p-2 z-50 relative"
@@ -117,7 +122,11 @@ export function Hero() {
           </AnimatePresence>
 
           {/* Menu Desktop */}
-          <ul className="hidden lg:flex gap-6 text-xl">
+          <ul
+            className={`hidden lg:flex gap-6 justify-center ${
+              altura >= 900 ? "text-2xl" : "text-xl"
+            }`}
+          >
             {[
               { label: "Sobre Mim", link: "about-me" },
               { label: "Habilidades", link: "skills" },
@@ -137,7 +146,9 @@ export function Hero() {
         </motion.header>
 
         <motion.div
-          className="flex flex-col items-center text-center gap-6"
+          className={`flex flex-col items-center text-center ${
+            altura >= 900 ? "gap-10" : "gap-6"
+          } `}
           variants={staggerContainer}
         >
           <motion.h2
@@ -215,7 +226,7 @@ export function Hero() {
             <motion.a
               href="https://kaiquegeraldo.github.io/portifolio/curriculo/Curriculo-Kaique.pdf"
               download="curriculo-kaique.pdf"
-              className="py-3 px-6 bg-secondary/30 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/50 shadow-lg hover:scale-105 text-center"
+              className="py-3 px-6 bg-secondary/10 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/20 shadow-lg hover:scale-105 text-center"
               aria-label="Baixar meu CV"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -264,14 +275,18 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          <motion.div className="mt-4 animate-bounce" variants={fadeInUp}>
+          <motion.button
+            className="mt-4 animate-bounce cursor-pointer"
+            variants={fadeInUp}
+            onClick={() => scrollToSection("about-me")}
+          >
             <Image
               src={DoubleArrow}
               alt={"DoubleArrow"}
               className="w-8 h-8"
               style={{ fill: "currentcolor" }}
             />
-          </motion.div>
+          </motion.button>
         </motion.div>
       </motion.div>
     </motion.section>

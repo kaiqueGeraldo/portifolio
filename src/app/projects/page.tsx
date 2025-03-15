@@ -50,7 +50,7 @@ export default function ProjectsPage() {
         {projetos.map((item) => (
           <div
             key={item.id}
-            className="bg-white/20 backdrop-blur-lg shadow-lg rounded-2xl overflow-hidden transition-all duration-300 group"
+            className="bg-white/10 shadow-lg rounded-2xl overflow-hidden transition-all duration-300 group"
             data-aos="zoom-in"
           >
             <div className="relative w-full h-60 overflow-hidden">

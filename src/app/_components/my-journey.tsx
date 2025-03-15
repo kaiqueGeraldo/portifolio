@@ -81,7 +81,7 @@ export function MyJourney() {
 
               {/* Card */}
               <div
-                className={`relative z-0 bg-white/50 lg:bg-white/20 shadow-md rounded-lg p-6 max-w-md transition-all duration-300 hover:scale-105 border-2"
+                className={`relative z-0 bg-white/60 lg:bg-white/10 shadow-md rounded-lg p-6 max-w-md transition-all duration-300 hover:scale-105 border-2"
                 }`}
               >
                 <div className="flex items-center gap-4">

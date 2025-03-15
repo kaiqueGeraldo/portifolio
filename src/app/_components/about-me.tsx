@@ -64,7 +64,7 @@ export function AboutMe() {
             className="flex-1 flex justify-center my-10 lg:my-0"
             data-aos="fade-left"
           >
-            <div className="relative mt-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-visible shadow-lg border-4 border-primary backdrop-blur-xl bg-white/20">
+            <div className="relative mt-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-visible shadow-lg border-4 border-primary backdrop-blur-xl bg-white/10">
               <Image
                 src={kaique}
                 alt="Kaique"

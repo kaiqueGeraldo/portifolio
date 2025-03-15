@@ -201,7 +201,7 @@ export default function DetailProject() {
           <div className="flex gap-4">
             <button
               onClick={handleShare}
-              className="bg-gray-200 text-gray-700 px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-300 transition"
+              className="bg-gray-200/40 text-gray-700 px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-300 transition"
             >
               <ShareNetwork className="w-5 h-5" /> Compartilhar
             </button>

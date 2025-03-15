@@ -39,7 +39,7 @@ export function Projects() {
           </div>
 
           <button
-            className="py-3 px-6 lg:px-8 bg-white/20 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/50 shadow-lg hover:scale-105"
+            className="py-3 px-6 lg:px-8 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/50 shadow-lg hover:scale-105"
             aria-label="Ver Todos"
             data-aos="fade-left"
             onClick={() => handleProjetos()}
@@ -52,7 +52,7 @@ export function Projects() {
           {projetos.slice(0, 3).map((item, index) => (
             <div
               key={item.id}
-              className="group overflow-hidden bg-white/20 shadow-md rounded-lg"
+              className="group overflow-hidden bg-white/10 shadow-md rounded-lg mb-4"
               data-aos={
                 index === 0
                   ? "zoom-in-right"
