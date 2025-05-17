@@ -1,5 +1,5 @@
 import uberLogo from "../../../public/img-projects/uber.webp";
-import mindtaskLogo from "../../../public/img-projects/mind-task2.webp";
+import mindtaskLogo from "../../../public/img-projects/mind-task.webp";
 import amazonLogo from "../../../public/img-projects/amazon.webp";
 import petDevLogo from "../../../public/img-projects/pet-dev.webp";
 import campusSyncLogo from "../../../public/img-projects/campussync.webp";
@@ -14,7 +14,7 @@ import javascript from "../../../public/img-skills/javascript.webp";
 import html from "../../../public/img-skills/html.webp";
 import css from "../../../public/img-skills/css.webp";
 import nextJs from "../../../public/img-skills/nextjs.webp";
-import nodeJs from "../../../public/img-skills/nodeJs.webp";
+import nodeJs from "../../../public/img-skills/nodejs.webp";
 import typescript from "../../../public/img-skills/typescript.webp";
 import tailwind from "../../../public/img-skills/tailwind.webp";
 
