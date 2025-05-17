@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas, utilizando tecnologias como React, Next.js, Node.js, Flutter e Firebase.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Kaique Geraldo - Portfólio",
