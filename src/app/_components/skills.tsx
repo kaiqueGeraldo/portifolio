@@ -3,8 +3,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import flutter from "../../../public/img-skills/flutter.webp";
 import firebase from "../../../public/img-skills/firebase.webp";
-import csharp from "../../../public/img-skills/csharp.webp";
-import net from "../../../public/img-skills/net.webp";
 import sqlServer from "../../../public/img-skills/sql_server.webp";
 import git from "../../../public/img-skills/git.webp";
 import github from "../../../public/img-skills/github.webp";
@@ -28,55 +26,6 @@ const minhaFonte = localFont({
 });
 
 const skills = [
-  {
-    name: "Flutter",
-    image: flutter,
-    color: "#02569B",
-    doc: "https://flutter.dev/docs",
-  },
-  {
-    name: "Firebase",
-    image: firebase,
-    color: "#FFCA28",
-    doc: "https://firebase.google.com/docs",
-  },
-  {
-    name: "C#",
-    image: csharp,
-    color: "#9B4F96",
-    doc: "https://learn.microsoft.com/en-us/dotnet/csharp/",
-  },
-  {
-    name: ".NET Framework",
-    image: net,
-    color: "#512BD4",
-    doc: "https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet",
-  },
-  {
-    name: "SQL Server",
-    image: sqlServer,
-    color: "#CC2927",
-    doc: "https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16",
-  },
-  {
-    name: "HTML",
-    image: html,
-    color: "#E44D26",
-    doc: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    name: "CSS",
-    image: css,
-    color: "#1572B6",
-    doc: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  {
-    name: "JavaScript",
-    image: javascript,
-    color: "#F7DF1E",
-    doc: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-
   {
     name: "React",
     image: react,
@@ -118,6 +67,42 @@ const skills = [
     image: github,
     color: "#181717",
     doc: "https://docs.github.com/pt",
+  },
+  {
+    name: "Flutter",
+    image: flutter,
+    color: "#02569B",
+    doc: "https://flutter.dev/docs",
+  },
+  {
+    name: "Firebase",
+    image: firebase,
+    color: "#FFCA28",
+    doc: "https://firebase.google.com/docs",
+  },
+  {
+    name: "HTML",
+    image: html,
+    color: "#E44D26",
+    doc: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    image: css,
+    color: "#1572B6",
+    doc: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "JavaScript",
+    image: javascript,
+    color: "#F7DF1E",
+    doc: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "SQL Server",
+    image: sqlServer,
+    color: "#CC2927",
+    doc: "https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16",
   },
   {
     name: "Inteligência Artificial",
@@ -172,7 +157,7 @@ export function Skills() {
         <div className="hidden md:grid gap-4 mt-6">
           {/* Primeira linha - Fade Right */}
           <div
-            className="grid grid-cols-4 lg:grid-cols-8 gap-4"
+            className="grid grid-cols-4 lg:grid-cols-7 gap-4"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -251,7 +236,7 @@ export function Skills() {
 
           {/* Segunda linha - Fade Left */}
           <div
-            className="grid grid-cols-4 lg:grid-cols-8 gap-4"
+            className="grid grid-cols-4 lg:grid-cols-7 gap-4"
             data-aos="fade-left"
             data-aos-duration="1000"
           >

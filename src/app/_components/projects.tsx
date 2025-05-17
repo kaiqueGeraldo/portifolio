@@ -44,7 +44,7 @@ export function Projects() {
             data-aos="fade-left"
             onClick={() => handleProjetos()}
           >
-            Ver Todos
+            Ver Todos (+{projetos.length - 3})
           </button>
         </div>
 

@@ -12,8 +12,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Kaique Geraldo - Portfólio",
-  description: "Meu portfólio",
-  
+  description:
+    "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas, utilizando tecnologias como React, Next.js, Node.js, Flutter e Firebase.",
 };
 
 export default function RootLayout({

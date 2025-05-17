@@ -1,4 +1,6 @@
 import uberLogo from "../../../public/img-projects/uber.webp";
+import mindtaskLogo from "../../../public/img-projects/mind-task2.webp";
+import amazonLogo from "../../../public/img-projects/amazon.webp";
 import petDevLogo from "../../../public/img-projects/pet-dev.webp";
 import campusSyncLogo from "../../../public/img-projects/campussync.webp";
 import senaiLogo from "../../../public/img-instituicoes/senai.webp";
@@ -12,6 +14,7 @@ import javascript from "../../../public/img-skills/javascript.webp";
 import html from "../../../public/img-skills/html.webp";
 import css from "../../../public/img-skills/css.webp";
 import nextJs from "../../../public/img-skills/nextjs.webp";
+import nodeJs from "../../../public/img-skills/nodeJs.webp";
 import typescript from "../../../public/img-skills/typescript.webp";
 import tailwind from "../../../public/img-skills/tailwind.webp";
 
@@ -31,6 +34,42 @@ export const projetos = [
       },
     ],
     duracao: "15h",
+    status: "Finalizado",
+  },
+  {
+    id: "mind-task",
+    nome: "MindTask",
+    descricao:
+      "Aplicação web full stack para gerenciamento de projetos pessoais com grupos, tarefas em checklist, drag and drop, favoritos e troca de contas vinculadas. Backend estruturado em Node.js com SQL Server (padrão MVC) e autenticação JWT.",
+    imagem: mindtaskLogo,
+    link: "https://github.com/kaiqueGeraldo/mindtask.git",
+    site: "https://mindtask-fawn.vercel.app/",
+    tecnologias: [
+      {
+        nome: ["Next JS", "Node JS", "SQL Server"],
+        icone: [nextJs, nodeJs, sqlServer],
+        color: ["#000000", "#83CD29", "#CC2927"],
+      },
+    ],
+    duracao: "30h",
+    status: "Finalizado",
+  },
+  {
+    id: "amazon-scraper",
+    nome: "Amazon Scraper",
+    descricao:
+      "Aplicação web que permite buscar produtos na Amazon por palavras-chave, exibindo imagem, avaliação e reviews. Scraping realizado via backend Express usando Axios e jsdom. Favoritos persistem no localStorage.",
+    imagem: amazonLogo,
+    link: "https://github.com/kaiqueGeraldo/amazon-scraper.git",
+    site: "https://amazon-scraper-green.vercel.app/",
+    tecnologias: [
+      {
+        nome: ["Next JS", "Node JS"],
+        icone: [nextJs, nodeJs],
+        color: ["#000000", "#83CD29"],
+      },
+    ],
+    duracao: "3h",
     status: "Finalizado",
   },
   {
