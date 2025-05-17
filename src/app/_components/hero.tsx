@@ -225,7 +225,7 @@ export function Hero() {
               </div>
             )}
             <motion.a
-              href="https://kaiquegeraldo.github.io/portifolio/curriculo/Curriculo-Kaique.pdf"
+              href="https://github.com/kaiqueGeraldo/portifolio/public/curriculo/Curriculo-Kaique.pdf"
               download="curriculo-kaique.pdf"
               className="py-3 px-6 bg-secondary/10 border-2 border-primary rounded-lg text-primary font-semibold transition-all duration-300 hover:bg-secondary/20 shadow-lg hover:scale-105 text-center"
               aria-label="Baixar meu CV"
