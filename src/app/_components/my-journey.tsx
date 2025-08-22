@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
-import sesiLogo from "../../../public/img-instituicoes/sesi.webp";
+import mydatalogo from "../../../public/img-instituicoes/mydata.webp";
 import senaiLogo from "../../../public/img-instituicoes/senai.webp";
 import wordSkillsLogo from "../../../public/img-instituicoes/world-skills.webp";
 import unimarLogo from "../../../public/img-instituicoes/unimar.webp";
@@ -15,12 +15,6 @@ const minhaFonte = localFont({
 });
 
 const jornada = [
-  {
-    instituicao: "1° ano do Ensino Médio",
-    descricao:
-      "Início da minha trajetória no Ensino Médio, marcando o começo de uma nova fase acadêmica (2022-2024).",
-    imagem: sesiLogo,
-  },
   {
     instituicao: "Técnico em Desenvolvimento de Sistemas",
     descricao:
@@ -36,8 +30,14 @@ const jornada = [
   {
     instituicao: "Bacharelado em Ciência da Computação",
     descricao:
-      "Atualmente, estou cursando Ciência da Computação, aprofundando meus conhecimentos em tecnologia, programação e desenvolvimento de software (2025 - presente).",
+      "Atualmente, estou cursando Ciência da Computação, aprofundando meus conhecimentos em tecnologia, programação e desenvolvimento de software (jan/2025 - presente).",
     imagem: unimarLogo,
+  },
+  {
+    instituicao: "Estágio em TI",
+    descricao:
+      "O estágio na MyData Cloud representa um novo e importante desafio na minha jornada. É a minha primeira imersão no mercado de trabalho, onde busco aplicar minha dedicação para aprender, colaborar com a equipe e adquirir uma visão prática do universo da tecnologia. (ago/2025 - presente).",
+    imagem: mydatalogo,
   },
 ];
 
