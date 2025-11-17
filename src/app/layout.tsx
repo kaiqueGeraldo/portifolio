@@ -13,14 +13,14 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Kaique Geraldo - Portfólio",
   description:
-    "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas, utilizando tecnologias como React, Next.js, Node.js, Flutter e Firebase.",
+    "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas.",
   metadataBase: new URL("https://kaique.dev.br"),
   openGraph: {
     type: "website",
     url: "https://kaique.dev.br",
     title: "Kaique Geraldo - Portfólio",
     description:
-      "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas, utilizando tecnologias como React, Next.js, Node.js, Flutter e Firebase.",
+      "Portfólio de Kaique Geraldo, desenvolvedor Full Stack com foco em soluções web e mobile modernas.",
     images: [
       {
         url: "/og-image.webp",

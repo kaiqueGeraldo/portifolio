@@ -34,29 +34,34 @@ export function AboutMe() {
             className="text-lg lg:text-xl leading-relaxed max-w-xl lg:max-w-4xl lg:pl-6 lg:mt-6"
             data-aos="fade-right"
           >
-            Tenho{" "}
+            Tenho
             <span className="font-semibold text-secondary">
-              <Idade /> anos
-            </span>{" "}
-            e sou apaixonado por tecnologia e inovação. Sou proativo, adaptável
-            e focado em aprendizado contínuo, sempre buscando aprimorar minhas
-            habilidades e acompanhar as tendências do setor.
+              {" "}
+              <Idade /> anos{" "}
+            </span>
+            e sou um Desenvolvedor de Software apaixonado por tecnologia. Sou
+            proativo, adaptável e meu foco é o aprendizado contínuo e a
+            excelência técnica.
             <br />
             <br />
-            Tenho experiência em desenvolvimento web e mobile, além de
-            conhecimento em bancos de dados e ferramentas de design. Gosto de
-            desafios e já participei de competições como a
+            Atualmente, atuo como Desenvolvedor Java Júnior alocado na
+            <span className="font-semibold text-secondary"> Nuclea</span>
+            , aplicando meu conhecimento para construir soluções de alta
+            performance para o setor financeiro.
+            <br />
+            <br />
+            Minha trajetória inclui uma base sólida em desenvolvimento Full
+            Stack e Mobile. Participei da
             <span className="font-semibold text-secondary">
               {" "}
               SP Skills 2024
             </span>
-            , onde desenvolvi soluções em um ambiente de alta performance.
+            , o que consolidou minha capacidade de resolver problemas em
+            ambientes de alta pressão.
             <br />
             <br />
-            Trabalho bem em equipe, tenho facilidade em aprender novas
-            tecnologias e sou orientado a soluções eficientes. Busco
-            oportunidades para aplicar meu conhecimento na prática e contribuir
-            com projetos inovadores, sempre visando qualidade e otimização.
+            Essa experiência diversificada, que vai do Full Stack ao mobile , me
+            proporciona uma base sólida para me adaptar a novos ecossistemas.
           </motion.p>
 
           {/* Imagem */}
@@ -64,7 +69,7 @@ export function AboutMe() {
             className="flex-1 flex justify-center my-10 lg:my-0"
             data-aos="fade-left"
           >
-            <div className="relative mt-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-visible shadow-lg border-4 border-primary backdrop-blur-xl bg-white/10">
+            <div className="relative mt-24 lg:mt-10 w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-visible shadow-lg border-4 border-primary backdrop-blur-xl bg-white/10">
               <Image
                 src={kaique}
                 alt="Kaique"
@@ -75,8 +80,7 @@ export function AboutMe() {
                 style={{
                   objectFit: "cover",
                   scale: "1.4",
-                  marginTop: "-65px",
-                  marginLeft: "20px",
+                  marginTop: "-85px",
                   maskImage:
                     "linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%)",
                   WebkitMaskImage:

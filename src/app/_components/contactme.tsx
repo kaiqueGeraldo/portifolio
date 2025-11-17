@@ -21,7 +21,7 @@ export function ContactMe() {
   const [message, setMessage] = useState("");
   const maxLength = 400;
 
-  const API_URL = "https://backend-portifolio.up.railway.app/enviar-email";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -77,8 +77,8 @@ export function ContactMe() {
             CONTATE-ME
           </h1>
           <p className="font-semibold text-secondary text-lg mb-6">
-            ESTAMOS SEMPRE A UMA MENSAGEM DE DISTÂNCIA! ESTOU ABERTO A NOVOS
-            PROJETOS E OPORTUNIDADES DE TRABALHO. ENTRE EM CONTATO!
+            Para contatos profissionais, oportunidades ou propostas de
+            colaboração, sinta-se à vontade para preencher o formulário.
           </p>
         </div>
         <Image

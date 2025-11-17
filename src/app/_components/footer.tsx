@@ -25,9 +25,9 @@ export function Footer() {
           Kaique Geraldo
         </h1>
         <p className="text-lg md:text-xl max-w-2xl text-gray-700">
-          Obrigado por visitar meu portfólio! Se quiser trocar ideias, colaborar
-          em projetos ou apenas bater um papo sobre tecnologia, estou sempre à
-          disposição. Sinta-se à vontade para entrar em contato!
+          Obrigado pela visita. Estou sempre aberto a conexões profissionais e
+          discussões técnicas sobre desenvolvimento de software. Sinta-se à
+          vontade para me contatar.
         </p>
 
         <div className="flex gap-4 mt-4">

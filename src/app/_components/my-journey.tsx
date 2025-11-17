@@ -1,43 +1,62 @@
 "use client";
 
 import localFont from "next/font/local";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
 import mydatalogo from "../../../public/img-instituicoes/mydata.webp";
 import senaiLogo from "../../../public/img-instituicoes/senai.webp";
 import wordSkillsLogo from "../../../public/img-instituicoes/world-skills.webp";
 import unimarLogo from "../../../public/img-instituicoes/unimar.webp";
+import nucleaLogo from "../../../public/img-instituicoes/nuclea.webp";
 
 const minhaFonte = localFont({
   src: "../../../public/fonts/Colgent.ttf",
   display: "swap",
 });
 
-const jornada = [
+type JornadaItem = {
+  instituicao: string;
+  descricao: string;
+  imagem: StaticImageData;
+  type: "academic" | "professional";
+};
+
+const jornada: JornadaItem[] = [
   {
     instituicao: "Técnico em Desenvolvimento de Sistemas",
     descricao:
-      "Com a reformulação do Ensino Médio, tive a oportunidade de conciliar os estudos com um curso técnico em Desenvolvimento de Sistemas, ampliando meus conhecimentos na área de tecnologia (2023-2024).",
+      "Com a reformulação do Ensino Médio, tive a oportunidade de conciliar os estudos com um curso <strong>técnico em Desenvolvimento de Sistemas</strong>, ampliando meus conhecimentos na área de tecnologia (jan/2023-dez/2024).",
     imagem: senaiLogo,
+    type: "academic",
   },
   {
     instituicao: "SP SKILLS 2024",
     descricao:
-      "Fui selecionado para representar meu município na fase estadual da SP SKILLS, na modalidade #08 - Desenvolvimento de Aplicativos Móveis (2024).",
+      "Fui selecionado para representar meu município na fase estadual da <strong>SP SKILLS</strong>, na modalidade #08 - Desenvolvimento de Aplicativos Móveis (2024).",
     imagem: wordSkillsLogo,
+    type: "academic",
   },
   {
     instituicao: "Bacharelado em Ciência da Computação",
     descricao:
-      "Atualmente, estou cursando Ciência da Computação, aprofundando meus conhecimentos em tecnologia, programação e desenvolvimento de software (jan/2025 - presente).",
+      "Atualmente, estou cursando <strong>Ciência da Computação</strong>, aprofundando meus conhecimentos em tecnologia, programação e desenvolvimento de software (jan/2025 - presente).",
     imagem: unimarLogo,
+    type: "academic",
   },
   {
     instituicao: "Estágio em TI",
     descricao:
-      "O estágio na MyData Cloud representa um novo e importante desafio na minha jornada. É a minha primeira imersão no mercado de trabalho, onde busco aplicar minha dedicação para aprender, colaborar com a equipe e adquirir uma visão prática do universo da tecnologia. (ago/2025 - presente).",
+      "O estágio na <strong>MyData Cloud</strong> representou um novo e importante desafio na minha jornada. É a minha primeira imersão no mercado de trabalho. (ago/2025 - nov/2025).",
     imagem: mydatalogo,
+    type: "professional",
+  },
+  {
+    instituicao: "Desenvolvedor Java Júnior",
+    descricao:
+      "Iniciando minha carreira como Desenvolvedor Java. Contratado pela <strong>Code Group</strong> e atuando alocado na <strong>Núclea</strong>. Um novo capítulo que marca um grande passo no meu desenvolvimento profissional. (nov/2025 - presente).",
+    imagem: nucleaLogo,
+    type: "professional",
   },
 ];
 
@@ -45,13 +64,12 @@ export function MyJourney() {
   return (
     <section className="lg:p-10 p-5 pt-10 lg:pt-28 relative" id="my-journey">
       <div className="relative max-w-5xl mx-auto">
-        {/* Título */}
         <div className="text-center mb-10" data-aos="zoom-in">
           <h2 className={`${minhaFonte.className} text-4xl font-bold`}>
-            MINHA JORNADA ACADÊMICA
+            MINHA JORNADA
           </h2>
           <h4 className="font-semibold text-secondary text-lg max-w-2xl mx-auto">
-            ACOMPANHE O QUE PASSEI ATÉ O MOMENTO
+            ACOMPANHE MINHA TRAJETÓRIA ATÉ O MOMENTO
           </h4>
         </div>
 
@@ -76,7 +94,11 @@ export function MyJourney() {
                 className="absolute left-1/2 top-0 transform -translate-x-1/2 translate-y-[-50%] 
   bg-primary p-2 rounded-full text-white shadow-lg z-10"
               >
-                <GraduationCap className="w-6 h-6" />
+                {item.type === "academic" ? (
+                  <GraduationCap className="w-6 h-6" />
+                ) : (
+                  <Briefcase className="w-6 h-6" />
+                )}
               </div>
 
               {/* Card */}
@@ -91,7 +113,7 @@ export function MyJourney() {
                       alt={item.instituicao}
                       width={80}
                       height={80}
-                      className="rounded-lg object-cover"
+                      className="rounded-lg object-contain"
                     />
                   </div>
 
@@ -99,7 +121,10 @@ export function MyJourney() {
                     <h3 className="text-xl font-semibold">
                       {item.instituicao}
                     </h3>
-                    <p className="text-gray-700 text-sm">{item.descricao}</p>
+                    <p
+                      className="text-gray-700 text-sm"
+                      dangerouslySetInnerHTML={{ __html: item.descricao }}
+                    ></p>
                   </div>
                 </div>
               </div>

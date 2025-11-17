@@ -15,12 +15,12 @@ export function Final() {
 
     gsap.to(sectionRef.current, {
       y: "-60vh",
-      ease: "power2.out",
+      ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "top+=60vh",
-        scrub: 2.5,
+        end: "top+=200vh",
+        scrub: 1,
         pin: true,
       },
     });
