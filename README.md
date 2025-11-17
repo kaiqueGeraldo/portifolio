@@ -52,10 +52,10 @@ O portfólio integra uma API para envio de e-mails. O backend desta API está di
 
 O formulário de contato envia os dados preenchidos para a API através de uma requisição POST utilizando fetch. A API está hospedada no Railway e processa o envio do e-mail com nodemailer. Antes de submeter o formulário, há uma validação para garantir que todos os campos estejam preenchidos.
 
-Para configurar o envio de e-mails, defina a URL do servidor e faça o fetch:
+Para configurar o envio de e-mails, defina a URL do servidor no seu arquivo .env e faça o fetch:
 
 ```sh
-const API_URL = "https://backend-portifolio.up.railway.app/enviar-email";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 const res = await fetch(API_URL, {
         method: "POST",
