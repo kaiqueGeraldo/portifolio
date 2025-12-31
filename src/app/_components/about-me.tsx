@@ -1,11 +1,12 @@
 "use client";
 
-import Idade from "../utils/idade";
 import Image from "next/image";
-import { Assets } from "@/assets"
+import { Assets } from "@/assets";
 import { motion } from "framer-motion";
+import { calcularIdade } from "../utils/idade";
 
 export function AboutMe() {
+  const minhaIdade = calcularIdade("2007-04-24");
   return (
     <motion.section
       className="relative overflow-hidden flex items-center justify-center lg:p-10 p-5 pt-10 lg:pt-16"
@@ -14,9 +15,7 @@ export function AboutMe() {
       <div className="relative container" data-aos="zoom-in">
         {/* Título */}
         <div className="text-left lg:pl-16">
-          <h2 className="font-colgent text-4xl font-bold">
-            SOBRE MIM
-          </h2>
+          <h2 className="font-colgent text-4xl font-bold">SOBRE MIM</h2>
           <h4 className="font-semibold text-secondary text-lg max-w-2xl lg:max-w-3xl">
             UM POUCO SOBRE MINHA HISTÓRIA
           </h4>
@@ -29,9 +28,8 @@ export function AboutMe() {
             data-aos="fade-right"
           >
             Tenho
-            <span className="font-semibold text-secondary">
-              {" "}
-              <Idade /> anos{" "}
+            <span suppressHydrationWarning className="font-bold mx-1">
+              {minhaIdade}
             </span>
             e sou um Desenvolvedor de Software apaixonado por tecnologia. Sou
             proativo, adaptável e meu foco é o aprendizado contínuo e a
