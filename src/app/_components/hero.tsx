@@ -11,7 +11,7 @@ import {
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import DoubleArrow from "../../../public/ChevronDoubleDown.webp";
+import { Assets } from "@/assets";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -318,7 +318,7 @@ export function Hero() {
             onClick={() => scrollToSection("about-me")}
           >
             <Image
-              src={DoubleArrow}
+              src={Assets.General.ChevronDown}
               alt={"DoubleArrow"}
               className="w-8 h-8"
               style={{ fill: "currentcolor" }}
