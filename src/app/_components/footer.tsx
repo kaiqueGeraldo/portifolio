@@ -1,16 +1,10 @@
 "use client";
 
-import localFont from "next/font/local";
 import {
   LinkedinLogo,
   GithubLogo,
   Envelope,
 } from "@phosphor-icons/react/dist/ssr";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 export function Footer() {
   return (
@@ -20,7 +14,7 @@ export function Footer() {
           Desenvolvedor Web e Mobile
         </h2>
         <h1
-          className={`${minhaFonte.className} text-4xl md:text-6xl font-bold text-gray-900`}
+          className="font-colgent text-4xl md:text-6xl font-bold text-gray-900"
         >
           Kaique Geraldo
         </h1>

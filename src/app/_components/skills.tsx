@@ -1,112 +1,94 @@
 "use client";
 
 import useEmblaCarousel from "embla-carousel-react";
-import flutter from "../../../public/img-skills/flutter.webp";
-import firebase from "../../../public/img-skills/firebase.webp";
-import sqlServer from "../../../public/img-skills/sql_server.webp";
-import git from "../../../public/img-skills/git.webp";
-import github from "../../../public/img-skills/github.webp";
-import ia from "../../../public/img-skills/ia.webp";
-import javascript from "../../../public/img-skills/javascript.webp";
-import html from "../../../public/img-skills/html.webp";
-import css from "../../../public/img-skills/css.webp";
-import react from "../../../public/img-skills/react.webp";
-import nextJs from "../../../public/img-skills/nextjs.webp";
-import nodeJS from "../../../public/img-skills/nodejs.webp";
-import typescript from "../../../public/img-skills/typescript.webp";
-import tailwind from "../../../public/img-skills/tailwind.webp";
-import localFont from "next/font/local";
+import Image from "next/image";
+import { Assets } from "@/assets"
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import Image from "next/image";
 
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 const skills = [
   {
     name: "React",
-    image: react,
+    image: Assets.Skills.React,
     color: "#61DAFB",
     doc: "https://react.dev/",
   },
   {
     name: "Next Js",
-    image: nextJs,
+    image: Assets.Skills.Next,
     color: "#000000",
     doc: "https://nextjs.org/docs",
   },
   {
     name: "Node Js",
-    image: nodeJS,
+    image: Assets.Skills.Node,
     color: "#83CD29",
     doc: "https://nodejs.org/docs/latest/api/",
   },
   {
     name: "TypeScript",
-    image: typescript,
+    image: Assets.Skills.TS,
     color: "#3178C6",
     doc: "https://www.typescriptlang.org/docs/",
   },
   {
     name: "Tailwind CSS",
-    image: tailwind,
+    image: Assets.Skills.Tailwind,
     color: "#38BDF8",
     doc: "https://tailwindcss.com/docs",
   },
   {
     name: "Git",
-    image: git,
+    image: Assets.Skills.Git,
     color: "#F05032",
     doc: "https://git-scm.com/doc",
   },
   {
     name: "Github",
-    image: github,
+    image: Assets.Skills.Github,
     color: "#181717",
     doc: "https://docs.github.com/pt",
   },
   {
     name: "Flutter",
-    image: flutter,
+    image: Assets.Skills.Flutter,
     color: "#02569B",
     doc: "https://flutter.dev/docs",
   },
   {
     name: "Firebase",
-    image: firebase,
+    image: Assets.Skills.Firebase,
     color: "#FFCA28",
     doc: "https://firebase.google.com/docs",
   },
   {
     name: "HTML",
-    image: html,
+    image: Assets.Skills.HTML,
     color: "#E44D26",
     doc: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     name: "CSS",
-    image: css,
+    image: Assets.Skills.CSS,
     color: "#1572B6",
     doc: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "JavaScript",
-    image: javascript,
+    image: Assets.Skills.JS,
     color: "#F7DF1E",
     doc: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "SQL Server",
-    image: sqlServer,
+    image: Assets.Skills.SQL,
     color: "#CC2927",
     doc: "https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16",
   },
   {
     name: "Inteligência Artificial",
-    image: ia,
+    image: Assets.Skills.AI,
     color: "#7D00FF",
     doc: "https://theresanaiforthat.com/s/documentation/",
   },
@@ -143,7 +125,7 @@ export function Skills() {
     >
       <div className="relative container mx-auto">
         <div className="text-left lg:pl-16" data-aos="zoom-in">
-          <h2 className={`${minhaFonte.className} text-4xl font-bold`}>
+          <h2 className="font-colgent text-4xl font-bold">
             HABILIDADES
           </h2>
           <h4 className="font-semibold text-secondary text-lg max-w-2xl lg:max-w-3xl">

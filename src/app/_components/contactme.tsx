@@ -1,14 +1,8 @@
 "use client";
 
-import localFont from "next/font/local";
 import Image from "next/image";
-import contatoImg from "../../../public/contato.webp";
+import { Assets } from "@/assets"
 import { useState } from "react";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 export function ContactMe() {
   const [form, setForm] = useState({
@@ -38,6 +32,7 @@ export function ContactMe() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setMessage("");
 
     if (!form.nome || !form.email || !form.assunto || !form.mensagem) {
       setMessage("❌ Preencha todos os campos antes de enviar.");
@@ -58,12 +53,15 @@ export function ContactMe() {
       if (res.ok) {
         setMessage("✅ Email enviado com sucesso! Obrigado pelo contato.");
         setForm({ nome: "", email: "", assunto: "", mensagem: "" });
+      } else if (res.status === 429) {
+        setMessage("⏳ Você enviou muitos emails. Por favor, aguarde 24h para enviar novamente.");
       } else {
-        setMessage(`❌ Erro: ${data.message || "Erro ao enviar email."}`);
+        const erroTexto = data.error || data.message || "Erro desconhecido ao enviar.";
+        setMessage(`❌ ${erroTexto}`);
       }
     } catch (error) {
       console.error("Erro ao enviar email:", error);
-      setMessage("❌ Erro ao enviar email.");
+      setMessage("❌ Erro de conexão ao enviar email.");
       setLoading(false);
     }
   };
@@ -73,7 +71,7 @@ export function ContactMe() {
       {/* Texto e Imagem */}
       <div className="text-center lg:text-left">
         <div data-aos="zoom-in">
-          <h1 className={`${minhaFonte.className} text-4xl font-bold`}>
+          <h1 className="font-colgent text-4xl font-bold">
             CONTATE-ME
           </h1>
           <p className="font-semibold text-secondary text-lg mb-6">
@@ -82,7 +80,7 @@ export function ContactMe() {
           </p>
         </div>
         <Image
-          src={contatoImg}
+          src={Assets.General.Contato}
           alt={"Contato"}
           className="hidden lg:block max-w-sm"
           data-aos="fade-right"

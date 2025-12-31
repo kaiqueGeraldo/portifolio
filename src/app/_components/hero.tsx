@@ -6,16 +6,10 @@ import {
   GithubLogo,
   LinkedinLogo,
 } from "@phosphor-icons/react/dist/ssr";
-import DoubleArrow from "../../../public/ChevronDoubleDown.webp";
-import localFont from "next/font/local";
+import { Assets } from "@/assets"
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -70,7 +64,7 @@ export function Hero() {
         variants={staggerContainer}
       >
         <motion.header
-          className={`${minhaFonte.className} w-full p-4`}
+          className="font-colgent w-full p-4"
           variants={fadeInUp}
         >
           {/* Botão do menu hamburguer para mobile */}
@@ -159,7 +153,7 @@ export function Hero() {
             DESENVOLVEDOR WEB E MOBILE
           </motion.h2>
           <motion.h1
-            className={`${minhaFonte.className} text-5xl md:text-7xl font-bold`}
+            className="font-colgent text-5xl md:text-7xl font-bold"
             variants={fadeInUp}
           >
             Kaique Geraldo
@@ -282,7 +276,7 @@ export function Hero() {
             onClick={() => scrollToSection("about-me")}
           >
             <Image
-              src={DoubleArrow}
+              src={Assets.General.ChevronDown}
               alt={"DoubleArrow"}
               className="w-8 h-8"
               style={{ fill: "currentcolor" }}

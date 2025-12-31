@@ -8,12 +8,6 @@ import {
   ArrowLeft,
   ArrowArcRight,
 } from "@phosphor-icons/react/dist/ssr";
-import localFont from "next/font/local";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 export default function ProjectsPage() {
   const router = useRouter();
@@ -35,7 +29,7 @@ export default function ProjectsPage() {
 
         <div className="flex flex-col items-center" data-aos="zoom-in">
           <h2
-            className={`${minhaFonte.className} text-5xl font-bold mt-8 text-gray-900`}
+            className="font-colgent text-5xl font-bold mt-8 text-gray-900"
           >
             Meus Projetos
           </h2>
