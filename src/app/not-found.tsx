@@ -1,20 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-
-const minhaFonte = localFont({
-  src: "../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 export default function NotFound() {
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center text-center p-4">
       <motion.h1
-        className={`${minhaFonte.className} text-8xl font-bold text-primary`}
+        className="font-colgent text-8xl font-bold text-primary"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

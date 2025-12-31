@@ -1,15 +1,9 @@
 "use client";
 
 import { ArrowArcRight, GithubLogo } from "@phosphor-icons/react/dist/ssr";
-import localFont from "next/font/local";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { projetos } from "../data/projects";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
 
 export function Projects() {
   const router = useRouter();
@@ -30,7 +24,7 @@ export function Projects() {
       <div className="relative container mx-auto">
         <div className="flex justify-between items-center lg:px-16">
           <div className="text-left" data-aos="fade-right">
-            <h2 className={`${minhaFonte.className} text-4xl font-bold`}>
+            <h2 className="font-colgent text-4xl font-bold">
               PROJETOS
             </h2>
             <h4 className="font-semibold text-secondary text-lg max-w-2xl lg:max-w-3xl">

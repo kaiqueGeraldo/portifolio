@@ -14,6 +14,9 @@ export default {
         primary: "#23648C",
         secondary: "#BAD6D9",
       },
+      fontFamily: {
+        colgent: ["var(--font-colgent)", "sans-serif"],
+      },
     },
   },
   plugins: [],

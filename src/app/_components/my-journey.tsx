@@ -1,71 +1,16 @@
 "use client";
 
-import localFont from "next/font/local";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase } from "lucide-react";
-import mydatalogo from "../../../public/img-instituicoes/mydata.webp";
-import senaiLogo from "../../../public/img-instituicoes/senai.webp";
-import wordSkillsLogo from "../../../public/img-instituicoes/world-skills.webp";
-import unimarLogo from "../../../public/img-instituicoes/unimar.webp";
-import nucleaLogo from "../../../public/img-instituicoes/nuclea.webp";
-
-const minhaFonte = localFont({
-  src: "../../../public/fonts/Colgent.ttf",
-  display: "swap",
-});
-
-type JornadaItem = {
-  instituicao: string;
-  descricao: string;
-  imagem: StaticImageData;
-  type: "academic" | "professional";
-};
-
-const jornada: JornadaItem[] = [
-  {
-    instituicao: "Técnico em Desenvolvimento de Sistemas",
-    descricao:
-      "Com a reformulação do Ensino Médio, tive a oportunidade de conciliar os estudos com um curso <strong>técnico em Desenvolvimento de Sistemas</strong>, ampliando meus conhecimentos na área de tecnologia (jan/2023-dez/2024).",
-    imagem: senaiLogo,
-    type: "academic",
-  },
-  {
-    instituicao: "SP SKILLS 2024",
-    descricao:
-      "Fui selecionado para representar meu município na fase estadual da <strong>SP SKILLS</strong>, na modalidade #08 - Desenvolvimento de Aplicativos Móveis (2024).",
-    imagem: wordSkillsLogo,
-    type: "academic",
-  },
-  {
-    instituicao: "Bacharelado em Ciência da Computação",
-    descricao:
-      "Atualmente, estou cursando <strong>Ciência da Computação</strong>, aprofundando meus conhecimentos em tecnologia, programação e desenvolvimento de software (jan/2025 - presente).",
-    imagem: unimarLogo,
-    type: "academic",
-  },
-  {
-    instituicao: "Estágio em TI",
-    descricao:
-      "O estágio na <strong>MyData Cloud</strong> representou um novo e importante desafio na minha jornada. É a minha primeira imersão no mercado de trabalho. (ago/2025 - nov/2025).",
-    imagem: mydatalogo,
-    type: "professional",
-  },
-  {
-    instituicao: "Desenvolvedor Java Júnior",
-    descricao:
-      "Iniciando minha carreira como Desenvolvedor Java. Contratado pela <strong>Code Group</strong> e atuando alocado na <strong>Núclea</strong>. Um novo capítulo que marca um grande passo no meu desenvolvimento profissional. (nov/2025 - presente).",
-    imagem: nucleaLogo,
-    type: "professional",
-  },
-];
+import { jornada } from "../data/journey";
 
 export function MyJourney() {
   return (
     <section className="lg:p-10 p-5 pt-10 lg:pt-28 relative" id="my-journey">
       <div className="relative max-w-5xl mx-auto">
         <div className="text-center mb-10" data-aos="zoom-in">
-          <h2 className={`${minhaFonte.className} text-4xl font-bold`}>
+          <h2 className="font-colgent text-4xl font-bold">
             MINHA JORNADA
           </h2>
           <h4 className="font-semibold text-secondary text-lg max-w-2xl mx-auto">

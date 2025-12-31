@@ -1,9 +1,4 @@
-import { Hero } from "./_components/hero";
-import { AboutMe } from "./_components/about-me";
-import { Skills } from "./_components/skills";
-import { Projects } from "./_components/projects";
-import { MyJourney } from "./_components/my-journey";
-import { Final } from "./_components/final";
+import { Hero, AboutMe, Skills, Projects, MyJourney, Final } from "./_components";
 import { FloatingMenu } from "./utils/floatingMenu";
 import { ScrollToTop } from "./utils/scrollToTop";
 
