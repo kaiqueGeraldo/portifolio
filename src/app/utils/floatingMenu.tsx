@@ -36,7 +36,7 @@ export function FloatingMenu() {
 
   return (
     <nav
-        className={`font-colgent overflow-hidden z-20 fixed top-5 left-1/2 transform -translate-x-1/2 hidden lg:flex bg-white/30 text-white p-3 rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-300 ${
+      className={`font-colgent z-20 fixed top-5 left-1/2 transform -translate-x-1/2 hidden lg:flex bg-white/30 text-white p-2 rounded-lg shadow-lg hover:opacity-80 transition-opacity duration-300 w-max max-w-[95vw] ${
         showMenu
           ? blinkEffect
             ? "opacity-100"
@@ -44,7 +44,7 @@ export function FloatingMenu() {
           : "opacity-0 pointer-events-none"
       }`}
     >
-      <ul className="hidden lg:flex gap-4 text-xl">
+      <ul className="flex items-center justify-center gap-1 xl:gap-4 text-base xl:text-xl whitespace-nowrap">
         {[
           { label: "Sobre Mim", link: "about-me" },
           { label: "Habilidades", link: "skills" },
@@ -55,7 +55,7 @@ export function FloatingMenu() {
           <li
             key={index}
             onClick={() => scrollToSection(item.link)}
-            className="cursor-pointer px-6 py-2 transition-all duration-300 rounded-md hover:bg-primary hover:text-secondary hover:scale-105"
+            className="cursor-pointer px-4 xl:px-6 py-2 transition-all duration-300 rounded-md hover:bg-primary hover:text-secondary hover:scale-105"
           >
             {item.label}
           </li>

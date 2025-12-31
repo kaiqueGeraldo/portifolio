@@ -15,7 +15,6 @@ export default {
         secondary: "#BAD6D9",
       },
       fontFamily: {
-        sans: ["var(--font-poppins)", "sans-serif"], 
         colgent: ["var(--font-colgent)", "sans-serif"],
       },
     },

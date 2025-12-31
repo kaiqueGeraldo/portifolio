@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${colgent.variable}`}>
-      <body className={`${poppins.variable} text-black`}>
+      <body className={` text-black`}>
         <SmoothScrollWrapper>{children}</SmoothScrollWrapper> <AosInit />
         <Toaster richColors position="bottom-right" expand={true} />
       </body>

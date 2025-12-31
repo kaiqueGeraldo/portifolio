@@ -78,7 +78,7 @@ export function ContactMe() {
       {/* Formulário */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-opacity-90 bg-white/20 p-6 rounded-xl shadow-lg flex flex-col gap-4"
+        className="bg-opacity-90 bg-white/20 p-6 rounded-xl shadow-lg flex flex-col gap-3"
         data-aos="fade-left"
       >
         {/* Campo Nome */}
@@ -88,11 +88,11 @@ export function ContactMe() {
             placeholder="Nome"
             maxLength={50}
             className={`w-full p-3 rounded-md border ${
-              errors.nome ? "border-red-500" : "border-black/60"
+              errors.nome ? "border-red-900" : "border-black/60"
             } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
           />
           {errors.nome && (
-            <span className="text-red-600 text-sm font-bold mt-1 block">
+            <span className="text-red-900 text-sm mt-1 block">
               {errors.nome.message}
             </span>
           )}
@@ -105,11 +105,11 @@ export function ContactMe() {
             placeholder="Email"
             maxLength={50}
             className={`w-full p-3 rounded-md border ${
-              errors.email ? "border-red-500" : "border-black/60"
+              errors.email ? "border-red-900" : "border-black/60"
             } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
           />
           {errors.email && (
-            <span className="text-red-600 text-sm font-bold mt-1 block">
+            <span className="text-red-900 text-sm mt-1 block">
               {errors.email.message}
             </span>
           )}
@@ -122,11 +122,11 @@ export function ContactMe() {
             placeholder="Assunto"
             maxLength={50}
             className={`w-full p-3 rounded-md border ${
-              errors.assunto ? "border-red-500" : "border-black/60"
+              errors.assunto ? "border-red-900" : "border-black/60"
             } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
           />
           {errors.assunto && (
-            <span className="text-red-600 text-sm font-bold mt-1 block">
+            <span className="text-red-900 text-sm mt-1 block">
               {errors.assunto.message}
             </span>
           )}
@@ -138,13 +138,12 @@ export function ContactMe() {
             {...register("mensagem")}
             placeholder="Digite sua mensagem..."
             maxLength={maxLength}
-            rows={4}
             className={`w-full p-3 rounded-md border ${
-              errors.mensagem ? "border-red-500" : "border-black/60"
+              errors.mensagem ? "border-red-900" : "border-black/60"
             } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none`}
           />
           <div className="flex justify-between items-center mt-1">
-            <span className="text-red-600 text-sm font-bold min-h-[20px]">
+            <span className="text-red-900 text-sm min-h-[20px]">
               {errors.mensagem?.message}
             </span>
             <span className="text-sm text-black/60">
@@ -155,7 +154,7 @@ export function ContactMe() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full mt-2 bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed font-semibold flex justify-center items-center"
+          className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
         >
           {isSubmitting ? (
             <span className="animate-pulse">Enviando...</span>
