@@ -28,8 +28,11 @@ export function AboutMe() {
             data-aos="fade-right"
           >
             Tenho
-            <span suppressHydrationWarning className="font-bold mx-1">
-              {minhaIdade}
+            <span
+              suppressHydrationWarning
+              className="font-semibold text-secondary"
+            >
+              {" "}{minhaIdade} anos{" "}
             </span>
             e sou um Desenvolvedor de Software apaixonado por tecnologia. Sou
             proativo, adaptável e meu foco é o aprendizado contínuo e a

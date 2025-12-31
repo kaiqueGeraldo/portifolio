@@ -4,6 +4,7 @@ import { AosInit } from "./_components/aos-init";
 import "./globals.css";
 import SmoothScrollWrapper from "./_components/smooth-scroll";
 import localFont from "next/font/local";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -48,6 +49,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${colgent.variable}`}>
       <body className={`${poppins.variable} text-black`}>
         <SmoothScrollWrapper>{children}</SmoothScrollWrapper> <AosInit />
+        <Toaster richColors position="bottom-right" expand={true} />
       </body>
     </html>
   );

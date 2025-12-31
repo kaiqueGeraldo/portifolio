@@ -1,68 +1,58 @@
 "use client";
 
 import Image from "next/image";
-import { Assets } from "@/assets"
-import { useState } from "react";
+import { Assets } from "@/assets";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
+
+const contactSchema = z.object({
+  nome: z.string().min(2, "O nome precisa ter pelo menos 2 caracteres"),
+  email: z.string().email("Digite um e-mail válido"),
+  assunto: z.string().min(3, "O assunto é muito curto"),
+  mensagem: z.string().min(10, "Sua mensagem deve ter pelo menos 10 caracteres"),
+});
+
+type ContactFormSchema = z.infer<typeof contactSchema>;
 
 export function ContactMe() {
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    assunto: "",
-    mensagem: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
   const maxLength = 400;
-
   const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const {
+    register,
+    handleSubmit,
+    reset,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormSchema>({
+    resolver: zodResolver(contactSchema),
+  });
 
-  const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const textarea = e.target;
-    textarea.style.height = "auto";
-    textarea.style.height = `${textarea.scrollHeight}px`;
-  };
+  const mensagemAtual = watch("mensagem", "");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    setMessage("");
-
-    if (!form.nome || !form.email || !form.assunto || !form.mensagem) {
-      setMessage("❌ Preencha todos os campos antes de enviar.");
-      setLoading(false);
-      return;
-    }
-
+  const onSubmit = async (data: ContactFormSchema) => {
     try {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(data),
       });
 
-      const data = await res.json();
-      setLoading(false);
+      const responseData = await res.json();
 
       if (res.ok) {
-        setMessage("✅ Email enviado com sucesso! Obrigado pelo contato.");
-        setForm({ nome: "", email: "", assunto: "", mensagem: "" });
+        toast.success("Mensagem enviada com sucesso! 🚀");
+        reset();
       } else if (res.status === 429) {
-        setMessage("⏳ Você enviou muitos emails. Por favor, aguarde 24h para enviar novamente.");
+        toast.error("Muitas tentativas! Tente novamente em 24h.");
       } else {
-        const erroTexto = data.error || data.message || "Erro desconhecido ao enviar.";
-        setMessage(`❌ ${erroTexto}`);
+        toast.error(responseData.error || "Erro ao enviar mensagem.");
       }
     } catch (error) {
-      console.error("Erro ao enviar email:", error);
-      setMessage("❌ Erro de conexão ao enviar email.");
-      setLoading(false);
+      console.error(error);
+      toast.error("Erro de conexão. Verifique sua internet.");
     }
   };
 
@@ -71,9 +61,7 @@ export function ContactMe() {
       {/* Texto e Imagem */}
       <div className="text-center lg:text-left">
         <div data-aos="zoom-in">
-          <h1 className="font-colgent text-4xl font-bold">
-            CONTATE-ME
-          </h1>
+          <h1 className="font-colgent text-4xl font-bold">CONTATE-ME</h1>
           <p className="font-semibold text-secondary text-lg mb-6">
             Para contatos profissionais, oportunidades ou propostas de
             colaboração, sinta-se à vontade para preencher o formulário.
@@ -89,66 +77,92 @@ export function ContactMe() {
 
       {/* Formulário */}
       <form
-        onSubmit={handleSubmit}
-        className="bg-opacity-90 bg-white/20 p-6 rounded-xl shadow-lg"
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-opacity-90 bg-white/20 p-6 rounded-xl shadow-lg flex flex-col gap-4"
         data-aos="fade-left"
       >
-        <input
-          type="text"
-          name="nome"
-          placeholder="Nome"
-          maxLength={50}
-          value={form.nome}
-          onChange={handleChange}
-          className="w-full p-3 mb-3 rounded-md border border-black/60 placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-          data-aos="zoom-in"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          maxLength={50}
-          value={form.email}
-          onChange={handleChange}
-          className="w-full p-3 mb-3 rounded-md border border-black/60 placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-          data-aos="zoom-in"
-        />
-        <input
-          type="text"
-          name="assunto"
-          placeholder="Assunto"
-          maxLength={50}
-          value={form.assunto}
-          onChange={handleChange}
-          className="w-full p-3 mb-3 rounded-md border border-black/60 placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-          data-aos="zoom-in"
-        />
-        <textarea
-          name="mensagem"
-          placeholder="Digite sua mensagem..."
-          maxLength={maxLength}
-          value={form.mensagem}
-          onChange={handleChange}
-          onInput={handleInput}
-          className="w-full p-3 rounded-md border border-black/60 placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary"
-          data-aos="zoom-in"
-          style={{ resize: "none", overflow: "hidden" }}
-        />
-        <div
-          className="text-sm text-black/60 flex justify-end"
-          data-aos="zoom-in"
-        >
-          <span>{form.mensagem.length}</span> / {maxLength}
+        {/* Campo Nome */}
+        <div>
+          <input
+            {...register("nome")}
+            placeholder="Nome"
+            maxLength={50}
+            className={`w-full p-3 rounded-md border ${
+              errors.nome ? "border-red-500" : "border-black/60"
+            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+          />
+          {errors.nome && (
+            <span className="text-red-600 text-sm font-bold mt-1 block">
+              {errors.nome.message}
+            </span>
+          )}
+        </div>
+
+        {/* Campo Email */}
+        <div>
+          <input
+            {...register("email")}
+            placeholder="Email"
+            maxLength={50}
+            className={`w-full p-3 rounded-md border ${
+              errors.email ? "border-red-500" : "border-black/60"
+            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+          />
+          {errors.email && (
+            <span className="text-red-600 text-sm font-bold mt-1 block">
+              {errors.email.message}
+            </span>
+          )}
+        </div>
+
+        {/* Campo Assunto */}
+        <div>
+          <input
+            {...register("assunto")}
+            placeholder="Assunto"
+            maxLength={50}
+            className={`w-full p-3 rounded-md border ${
+              errors.assunto ? "border-red-500" : "border-black/60"
+            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+          />
+          {errors.assunto && (
+            <span className="text-red-600 text-sm font-bold mt-1 block">
+              {errors.assunto.message}
+            </span>
+          )}
+        </div>
+
+        {/* Campo Mensagem */}
+        <div>
+          <textarea
+            {...register("mensagem")}
+            placeholder="Digite sua mensagem..."
+            maxLength={maxLength}
+            rows={4}
+            className={`w-full p-3 rounded-md border ${
+              errors.mensagem ? "border-red-500" : "border-black/60"
+            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none`}
+          />
+          <div className="flex justify-between items-center mt-1">
+            <span className="text-red-600 text-sm font-bold min-h-[20px]">
+              {errors.mensagem?.message}
+            </span>
+            <span className="text-sm text-black/60">
+              {mensagemAtual.length} / {maxLength}
+            </span>
+          </div>
         </div>
         <button
           type="submit"
-          disabled={loading}
-          className="w-full mt-4 bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all"
-          data-aos="zoom-in"
+          disabled={isSubmitting}
+          className="w-full mt-2 bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed font-semibold flex justify-center items-center"
         >
-          {loading ? "Enviando..." : "Enviar Mensagem"}
+          {isSubmitting ? (
+            <span className="animate-pulse">Enviando...</span>
+          ) : (
+            "Enviar Mensagem"
+          )}
         </button>
-        {message && <p className="mt-3 text-black">{message}</p>}
       </form>
     </div>
   );
