@@ -24,6 +24,9 @@ import SkillTS from "../../public/img-skills/typescript.webp";
 import SkillJava from "../../public/img-skills/java.webp";
 import SkillSpring from "../../public/img-skills/springboot.webp";
 import SkillAngular from "../../public/img-skills/angular.webp";
+import SkillHTML from "../../public/img-skills/html.webp";
+import SkillCSS from "../../public/img-skills/css.webp";
+import SkillJS from "../../public/img-skills/javascript.webp";
 
 // --- Projects ---
 import ProjAmazon from "../../public/img-projects/amazon.webp";
@@ -68,6 +71,9 @@ export const Assets = {
     SQL: SkillSQL,
     Tailwind: SkillTailwind,
     TS: SkillTS,
+    HTML: SkillHTML,
+    CSS: SkillCSS,
+    JS: SkillJS,
   },
   Projects: {
     Amazon: ProjAmazon,
