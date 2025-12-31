@@ -1,25 +1,60 @@
-# 🎨 Portfólio Pessoal
+# 👨‍💻 Portfólio Profissional | Kaique Geraldo
 
-Este é o meu portfólio desenvolvido com **Next.js**, destacando meus projetos, habilidades e formas de contato. O site consome uma **API de envio de e-mails** para facilitar a comunicação.
+> **Engenharia de Software • Java • Full Stack**
 
-## 🚀 Tecnologias Utilizadas
+Bem-vindo ao repositório do meu portfólio oficial. Este projeto foi arquitetado para demonstrar não apenas meus projetos e habilidades, mas também meu domínio sobre **engenharia de frontend moderna**, performance e boas práticas de desenvolvimento.
 
-- **Next.js** - Framework React para renderização e otimização de páginas.
-- **React.js** - Biblioteca para construção da interface do usuário.
-- **Tailwind CSS** - Framework para estilização rápida e responsiva.
-- **Framer Motion** - Biblioteca para animações fluidas e interativas.
-- **Nodemailer** - Utilizado no backend para envio de emails.
+O projeto foi atualizado recentemente para **Next.js 16**, garantindo segurança e uso das features mais recentes do React Server Components.
+
+## 🚀 Stack Tecnológica
+
+O projeto utiliza uma arquitetura robusta e tipada:
+
+### **Core & Arquitetura**
+- **Next.js 16**
+- **React 19**
+- **TypeScript**
+
+### **Estilização & UI**
+- **Tailwind CSS**
+- **Framer Motion**
+- **React Portal** 
+
+### **Formulários & Validação**
+- **React Hook Form**
+- **Zod**
+- **Sonner**
+
+### **Utils & Bibliotecas**
+- **Embla Carousel**
+- **Lucide React / Phosphor Icons**
+- **AOS**
+
+---
 
 ## 🌐 Demonstração
 
-Acesse meu portfólio online:
-👉 [Meu Portfólio](https://kaiquegeraldo.github.io/portifolio/)
+Acesse a versão de produção:
+👉 [Meu Portfólio](https://kaique.dev.br/)
+
+---
+
+## 🛠️ Destaques Técnicos do Projeto
+
+Além do visual, este portfólio implementa soluções técnicas avançadas:
+
+1.  **Modal com React Portal:** O formulário de contato utiliza `createPortal` para renderizar o overlay diretamente no `document.body`, evitando problemas de empilhamento de contexto e garantindo acessibilidade e cobertura total da tela.
+2.  **Scroll Chaining Prevention:** Componentes com rolagem interna possuem travas (`overscroll-y-contain`) e controle de eventos (`stopPropagation`) para impedir que a rolagem afete a página principal, melhorando a UX.
+3.  **Arquitetura de Dados:** Separação clara entre UI e Dados (`src/app/data`), facilitando a manutenção e escalabilidade das informações.
+4.  **Validação de E-mail:** O formulário de contato possui validação em tempo real com **Zod**, garantindo que apenas dados sanitizados cheguem à API.
+5.  **Identidade Full Stack:** A seção de habilidades foi estrategicamente organizada para refletir um perfil focado em **Java/Spring Boot** e **Angular/React**, alinhado às demandas do mercado corporativo.
+
+---
 
 ## 📌 Instalação e Execução Local
 
 1. Clone este repositório:
-
-   ```sh
+   ```bash
    git clone https://github.com/kaiqueGeraldo/portfolio.git
    ```
 
@@ -43,81 +78,34 @@ Acesse meu portfólio online:
 
 5. Acesse **http://localhost:3000** no navegador.
 
-## 📬 API de Contato
+## 📬 Integração Backend (Email API)
 
-O portfólio integra uma API para envio de e-mails. O backend desta API está disponível aqui:
-👉 [Repositório da API](https://github.com/kaiqueGeraldo/backend-portifolio)
+Este frontend se comunica com uma API Backend dedicada para o envio seguro de e-mails.
+- [Repositório da API](https://github.com/kaiqueGeraldo/backend-portifolio)
+- Tecnologias: Node.js, Express, Resend
+- Fluxo: O formulário valida os dados no cliente -> Envia POST para a API -> API processa via SMTP -> Retorna feedback visual para o usuário.
 
-**Como funciona o envio de e-mail?**
+## 📂 Estrutura de Pastas
 
-O formulário de contato envia os dados preenchidos para a API através de uma requisição POST utilizando fetch. A API está hospedada no Railway e processa o envio do e-mail com nodemailer. Antes de submeter o formulário, há uma validação para garantir que todos os campos estejam preenchidos.
-
-Para configurar o envio de e-mails, defina a URL do servidor no seu arquivo .env e faça o fetch:
-
-```sh
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
-
-const res = await fetch(API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-const data = await res.json();
-```
-
-## 🛠️ Estrutura do Projeto
+A estrutura segue o padrão do Next.js App Router:
 
 ```
-/
-├── public/                  # Arquivos públicos (imagens, etc.)
-├── src/
-│   ├── app/                 # Diretório principal do Next.js
-│   │   ├── _components/      # Componentes reutilizáveis
-│   │   │   ├── about-me.tsx  # Seção "Sobre mim"
-│   │   │   ├── contactme.tsx # Formulário de contato
-│   │   │   ├── projects.tsx  # Seção de projetos
-│   │   │   ├── skills.tsx    # Seção de habilidades
-│   │   │   ├── footer.tsx    # Rodapé
-│   │   │   ├── hero.tsx      # Seção inicial (hero)
-│   │   │   ├── my-journey.tsx # Linha do tempo da minha jornada
-│   │   │   ├── final.tsx     # Seção final do portfólio
-│   │   │   ├── aos-init.tsx  # Inicialização de animações
-│   │   │   ├── smooth-scroll.js # Script para rolagem suave
-│   │   ├── data/             # Dados utilizados no portfólio
-│   │   │   ├── projects.ts   # Lista de projetos
-│   │   ├── projects/         # Páginas de projetos
-│   │   │   ├── page.tsx      # Página principal de projetos
-│   │   │   ├── loading.tsx   # Componente de carregamento
-│   │   ├── detail-project/   # Página de detalhes de um projeto
-│   │   │   ├── page.tsx      # Exibição detalhada do projeto
-│   │   │   ├── loading.tsx   # Componente de carregamento
-│   │   ├── utils/            # Funções utilitárias
-│   │   │   ├── floatingMenu.tsx   # Menu flutuante
-│   │   │   ├── idade.tsx   # Componente para o calculo da minha idade automática
-│   │   │   ├── scrollToTop.tsx   # Componente de scroll para o topo
-│   │   ├── layout.tsx        # Layout principal
-│   │   ├── not-found.tsx     # Página 404
-│   │   ├── page.tsx          # Página principal
-│   │   ├── globals.css       # Estilos globais
-├── .env.local                # Variáveis de ambiente
-├── next.config.js            # Configuração do Next.js
-├── package.json              # Dependências do projeto
-├── README.md                 # Documentação
+src/
+├── app/
+│   ├── _components/      # Componentes isolados
+│   ├── data/             # Fonte da verdade dos dados
+│   ├── projects/         # Rotas de listagem de projetos
+│   ├── utils/            # Hooks e funções auxiliares
+│   ├── layout.tsx        # Layout global
+│   └── page.tsx          # Home Page
+├── assets/               # Gerenciador de imports de imagens/ícones
+└── styles/               # Configurações globais de CSS
 ```
-
-## ✨ Recursos
-
-- 💡 **Design Moderno** - Interface elegante e responsiva.
-- 🎬 **Animações Suaves** - Transições fluidas com Framer Motion.
-- 🔗 **Seção de Projetos** - Exibição interativa de trabalhos realizados.
-- 📧 **Formulário de Contato** - Integração com API para envio de emails.
-- 📱 **Responsivo** - Adaptado para desktop e mobile.
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. Sinta-se à vontade para utilizar e modificar conforme necessário. 😊
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes. Sinta-se à vontade para usar como inspiração ou template.
 
 ---
 
-Feito com ❤️ por **Kaique Geraldo** - [LinkedIn](https://www.linkedin.com/in/kaique-geraldo) | [GitHub](https://github.com/kaiqueGeraldo) | [Email](mailto:kaiique2404@gmail.com)
+Feito por **Kaique Geraldo** - [LinkedIn](https://www.linkedin.com/in/kaique-geraldo) | [GitHub](https://github.com/kaiqueGeraldo) | [Email](mailto:kaiique2404@gmail.com)
