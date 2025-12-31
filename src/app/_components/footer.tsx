@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="absolute bottom-0 w-full h-[60vh] text-black flex flex-col items-center justify-center">
       <div className="flex-1 flex flex-col items-center justify-center text-center gap-4 px-6 py-10">
         <h2 className="text-lg font-semibold text-secondary uppercase tracking-wider">
-          Desenvolvedor Web e Mobile
+          Desenvolvedor Full Stack
         </h2>
         <h1
           className="font-colgent text-4xl md:text-6xl font-bold text-gray-900"

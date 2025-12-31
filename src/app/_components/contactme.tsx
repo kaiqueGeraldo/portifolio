@@ -17,7 +17,7 @@ const contactSchema = z.object({
 type ContactFormSchema = z.infer<typeof contactSchema>;
 
 export function ContactMe() {
-  const maxLength = 400;
+  const maxLength = 800;
   const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
   const {
@@ -56,6 +56,22 @@ export function ContactMe() {
     }
   };
 
+  const getInputClass = (hasError: boolean) =>
+    `w-full p-3 rounded-md border ${
+      hasError
+        ? "border-red-800 focus:ring-red-800"
+        : "border-black/60 focus:ring-primary"
+    } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 transition-colors duration-300`;
+
+  const ErrorMessage = ({ message }: { message?: string }) => {
+    if (!message) return null;
+    return (
+      <span className="text-red-800 text-xs font-medium mt-1 ml-1 block tracking-wide">
+        {message}
+      </span>
+    );
+  };
+
   return (
     <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-14 lg:gap-20 items-center lg:px-16">
       {/* Texto e Imagem */}
@@ -87,15 +103,9 @@ export function ContactMe() {
             {...register("nome")}
             placeholder="Nome"
             maxLength={50}
-            className={`w-full p-3 rounded-md border ${
-              errors.nome ? "border-red-900" : "border-black/60"
-            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+            className={getInputClass(!!errors.nome)}
           />
-          {errors.nome && (
-            <span className="text-red-900 text-sm mt-1 block">
-              {errors.nome.message}
-            </span>
-          )}
+          <ErrorMessage message={errors.nome?.message} />
         </div>
 
         {/* Campo Email */}
@@ -104,15 +114,9 @@ export function ContactMe() {
             {...register("email")}
             placeholder="Email"
             maxLength={50}
-            className={`w-full p-3 rounded-md border ${
-              errors.email ? "border-red-900" : "border-black/60"
-            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+            className={getInputClass(!!errors.email)}
           />
-          {errors.email && (
-            <span className="text-red-900 text-sm mt-1 block">
-              {errors.email.message}
-            </span>
-          )}
+          <ErrorMessage message={errors.email?.message} />
         </div>
 
         {/* Campo Assunto */}
@@ -120,16 +124,10 @@ export function ContactMe() {
           <input
             {...register("assunto")}
             placeholder="Assunto"
-            maxLength={50}
-            className={`w-full p-3 rounded-md border ${
-              errors.assunto ? "border-red-900" : "border-black/60"
-            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary`}
+            maxLength={100}
+            className={getInputClass(!!errors.assunto)}
           />
-          {errors.assunto && (
-            <span className="text-red-900 text-sm mt-1 block">
-              {errors.assunto.message}
-            </span>
-          )}
+          <ErrorMessage message={errors.assunto?.message} />
         </div>
 
         {/* Campo Mensagem */}
@@ -138,15 +136,15 @@ export function ContactMe() {
             {...register("mensagem")}
             placeholder="Digite sua mensagem..."
             maxLength={maxLength}
-            className={`w-full p-3 rounded-md border ${
-              errors.mensagem ? "border-red-900" : "border-black/60"
-            } placeholder-black/60 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary resize-none`}
+            onWheel={(e) => e.stopPropagation()} 
+            data-lenis-prevent
+            className={`${getInputClass(!!errors.mensagem)} resize-none h-40 overflow-y-auto overscroll-y-contain cursor-text`}
           />
-          <div className="flex justify-between items-center mt-1">
-            <span className="text-red-900 text-sm min-h-[20px]">
-              {errors.mensagem?.message}
-            </span>
-            <span className="text-sm text-black/60">
+          <div className="flex justify-between items-start mt-1 px-1">
+            <div className="flex-1">
+              <ErrorMessage message={errors.mensagem?.message} />
+            </div>
+            <span className="text-xs text-black/60 font-medium ml-2">
               {mensagemAtual.length} / {maxLength}
             </span>
           </div>
@@ -154,7 +152,7 @@ export function ContactMe() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
+          className="w-full bg-primary text-white p-3 rounded-md hover:bg-primary/90 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center shadow-md font-semibold tracking-wide mt-2"
         >
           {isSubmitting ? (
             <span className="animate-pulse">Enviando...</span>

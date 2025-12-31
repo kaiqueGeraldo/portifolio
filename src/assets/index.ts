@@ -9,14 +9,11 @@ import OgImage from "../../public/og-image.webp";
 
 // --- Skills ---
 import SkillCSharp from "../../public/img-skills/csharp.webp";
-import SkillCSS from "../../public/img-skills/css.webp";
 import SkillFirebase from "../../public/img-skills/firebase.webp";
 import SkillFlutter from "../../public/img-skills/flutter.webp";
 import SkillGit from "../../public/img-skills/git.webp";
 import SkillGithub from "../../public/img-skills/github.webp";
-import SkillHTML from "../../public/img-skills/html.webp";
 import SkillAI from "../../public/img-skills/ia.webp";
-import SkillJS from "../../public/img-skills/javascript.webp";
 import SkillNet from "../../public/img-skills/net.webp";
 import SkillNext from "../../public/img-skills/nextjs.webp";
 import SkillNode from "../../public/img-skills/nodejs.webp";
@@ -24,6 +21,9 @@ import SkillReact from "../../public/img-skills/react.webp";
 import SkillSQL from "../../public/img-skills/sql_server.webp";
 import SkillTailwind from "../../public/img-skills/tailwind.webp";
 import SkillTS from "../../public/img-skills/typescript.webp";
+import SkillJava from "../../public/img-skills/java.webp";
+import SkillSpring from "../../public/img-skills/springboot.webp";
+import SkillAngular from "../../public/img-skills/angular.webp";
 
 // --- Projects ---
 import ProjAmazon from "../../public/img-projects/amazon.webp";
@@ -53,14 +53,14 @@ export const Assets = {
   },
   Skills: {
     CSharp: SkillCSharp,
-    CSS: SkillCSS,
+    Java: SkillJava,
     Firebase: SkillFirebase,
     Flutter: SkillFlutter,
     Git: SkillGit,
     Github: SkillGithub,
-    HTML: SkillHTML,
+    Spring: SkillSpring,
     AI: SkillAI,
-    JS: SkillJS,
+    Angular: SkillAngular,
     Net: SkillNet,
     Next: SkillNext,
     Node: SkillNode,

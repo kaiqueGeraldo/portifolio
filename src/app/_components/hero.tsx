@@ -155,7 +155,7 @@ export function Hero() {
             className="text-lg font-semibold text-secondary mt-4"
             variants={fadeInUp}
           >
-            DESENVOLVEDOR WEB E MOBILE
+            DESENVOLVEDOR FULL STACK
           </motion.h2>
           <motion.h1
             className="font-colgent text-5xl md:text-7xl font-bold"
