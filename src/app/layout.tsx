@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import { AosInit } from "./_components/aos-init";
 import "./globals.css";
 import SmoothScrollWrapper from "./_components/smooth-scroll";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
-});
 
 const colgent = localFont({
   src: "../../public/fonts/Colgent.ttf",
