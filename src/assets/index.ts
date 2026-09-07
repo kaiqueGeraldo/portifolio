@@ -1,93 +1,45 @@
-// --- Geral ---
-import BkgImg from "../../public/bkg.png";
-import ChevronDown from "../../public/ChevronDoubleDown.webp";
-import ContatoImg from "../../public/contato.webp";
-import GithubIcon from "../../public/github-icon.webp";
-import KaiqueCompetidor from "../../public/kaique-competidor.png";
-import LinkedinIcon from "../../public/linkedin-icon.webp";
-import OgImage from "../../public/og-image.webp";
-
-// --- Skills ---
-import SkillCSharp from "../../public/img-skills/csharp.webp";
-import SkillFirebase from "../../public/img-skills/firebase.webp";
-import SkillFlutter from "../../public/img-skills/flutter.webp";
-import SkillGit from "../../public/img-skills/git.webp";
-import SkillGithub from "../../public/img-skills/github.webp";
-import SkillAI from "../../public/img-skills/ia.webp";
-import SkillNet from "../../public/img-skills/net.webp";
-import SkillNext from "../../public/img-skills/nextjs.webp";
-import SkillNode from "../../public/img-skills/nodejs.webp";
-import SkillReact from "../../public/img-skills/react.webp";
-import SkillSQL from "../../public/img-skills/sql_server.webp";
-import SkillTailwind from "../../public/img-skills/tailwind.webp";
-import SkillTS from "../../public/img-skills/typescript.webp";
-import SkillJava from "../../public/img-skills/java.webp";
-import SkillSpring from "../../public/img-skills/springboot.webp";
-import SkillAngular from "../../public/img-skills/angular.webp";
-import SkillHTML from "../../public/img-skills/html.webp";
-import SkillCSS from "../../public/img-skills/css.webp";
-import SkillJS from "../../public/img-skills/javascript.webp";
-
-// --- Projects ---
-import ProjAmazon from "../../public/img-projects/amazon.webp";
-import ProjCampusSync from "../../public/img-projects/campussync.webp";
-import ProjMindTask from "../../public/img-projects/mind-task.webp";
-import ProjOlx from "../../public/img-projects/olx.webp";
-import ProjPetDev from "../../public/img-projects/pet-dev.webp";
-import ProjUber from "../../public/img-projects/uber.webp";
-
-// --- Institutions ---
-import InstMyData from "../../public/img-instituicoes/mydata.webp";
-import InstNuclea from "../../public/img-instituicoes/nuclea.webp";
-import InstSenai from "../../public/img-instituicoes/senai.webp";
-import InstUnimar from "../../public/img-instituicoes/unimar.webp";
-import InstWorldSkills from "../../public/img-instituicoes/world-skills.webp";
-
-// Exportação Organizada
 export const Assets = {
   General: {
-    Background: BkgImg,
-    ChevronDown: ChevronDown,
-    Contato: ContatoImg,
-    Github: GithubIcon,
-    Linkedin: LinkedinIcon,
-    KaiqueCompetidor: KaiqueCompetidor,
-    OgImage: OgImage,
+    Contato: "/contato-kaique-mesa.webp",
+    KaiqueCompetidor: "/kaique-competidor.png",
   },
   Skills: {
-    CSharp: SkillCSharp,
-    Java: SkillJava,
-    Firebase: SkillFirebase,
-    Flutter: SkillFlutter,
-    Git: SkillGit,
-    Github: SkillGithub,
-    Spring: SkillSpring,
-    AI: SkillAI,
-    Angular: SkillAngular,
-    Net: SkillNet,
-    Next: SkillNext,
-    Node: SkillNode,
-    React: SkillReact,
-    SQL: SkillSQL,
-    Tailwind: SkillTailwind,
-    TS: SkillTS,
-    HTML: SkillHTML,
-    CSS: SkillCSS,
-    JS: SkillJS,
+    Docker: "/img-skills/docker.svg",
+    Kafka: "/img-skills/kafka.svg",
+    AWS: "/img-skills/aws.svg",
+    PostgreSQL: "/img-skills/postgresql.svg",
+    Java: "/img-skills/java.webp",
+    Firebase: "/img-skills/firebase.webp",
+    Flutter: "/img-skills/flutter.webp",
+    Git: "/img-skills/git.webp",
+    Github: "/img-skills/github.webp",
+    Spring: "/img-skills/springboot.webp",
+    Angular: "/img-skills/angular.webp",
+    Next: "/img-skills/nextjs.webp",
+    Node: "/img-skills/nodejs.webp",
+    React: "/img-skills/react.webp",
+    SQL: "/img-skills/sql_server.webp",
+    Tailwind: "/img-skills/tailwind.webp",
+    TS: "/img-skills/typescript.webp",
+    HTML: "/img-skills/html.webp",
+    CSS: "/img-skills/css.webp",
+    JS: "/img-skills/javascript.webp",
   },
   Projects: {
-    Amazon: ProjAmazon,
-    CampusSync: ProjCampusSync,
-    MindTask: ProjMindTask,
-    Olx: ProjOlx,
-    PetDev: ProjPetDev,
-    Uber: ProjUber,
+    Agita: "/img-projects/agita-senai-cover.webp",
+    Amazon: "/img-projects/amazon-scraper-cover.webp",
+    Finance: "/img-projects/controle-financeiro.webp",
+    HBU: "/img-projects/hbu.webp",
+    MindTask: "/img-projects/mind-task-cover.webp",
+    Olx: "/img-projects/olx-cover.webp",
+    PetDev: "/img-projects/pet-dev-cover.webp",
+    Uber: "/img-projects/uber-cover.webp",
   },
   Institutions: {
-    MyData: InstMyData,
-    Nuclea: InstNuclea,
-    Senai: InstSenai,
-    Unimar: InstUnimar,
-    WorldSkills: InstWorldSkills,
-  }
+    MyData: "/img-instituicoes/mydata.webp",
+    Nuclea: "/img-instituicoes/nuclea.webp",
+    Senai: "/img-instituicoes/senai.webp",
+    Unimar: "/img-instituicoes/unimar.webp",
+    WorldSkills: "/img-instituicoes/world-skills.webp",
+  },
 };

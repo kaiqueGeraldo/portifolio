@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#152e2b"/><stop offset="1" stop-color="#142022"/></linearGradient><linearGradient id="line" x2="1"><stop stop-color="#599d88"/><stop offset="1" stop-color="#b7e8c9"/></linearGradient></defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<g fill="none" stroke="#aacdbc" opacity=".12"><circle cx="1020" cy="400" r="320"/><circle cx="1020" cy="400" r="240"/><circle cx="1020" cy="400" r="160"/><path d="M0 580H1200M0 630H1200"/></g>
+<path d="m650 530 100-80 95 25 115-155 130 30 110-140" stroke="url(#line)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="70" y="74" width="58" height="58" rx="16" fill="#c8efda"/><path d="M84 111v-12m14 12V88m14 23V96" stroke="#244a3e" stroke-width="6" stroke-linecap="round"/>
+<g font-family="Arial,sans-serif"><text x="70" y="292" fill="#f0f8f2" font-size="76" font-weight="700">Controle</text><text x="70" y="382" fill="#c8efda" font-size="76" font-weight="700">Financeiro</text><text x="74" y="638" fill="#a6c5b7" font-size="21" letter-spacing="4">JAVA / SPRING BOOT / NEXT.JS</text></g>
+</svg>
