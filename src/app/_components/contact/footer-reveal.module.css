@@ -1,0 +1,43 @@
+.root {
+  position: relative;
+  isolation: isolate;
+  margin-top: 4rem;
+}
+.contact {
+  border-radius: clamp(32px, 5vw, 72px);
+  border: 1px solid #ffffff1a;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+  min-height: 100vh;
+  min-height: 100svh;
+  align-items: center;
+  background: #232127;
+  border-bottom: 1px solid #ffffff1a;
+  box-shadow: 0 24px 50px #0004;
+}
+.footer {
+  position: relative;
+  z-index: 0;
+  background: #161619;
+}
+.root[data-reveal-footer="true"] .footer {
+  position: sticky;
+  bottom: 0;
+}
+/* Keyboard navigation must never focus a link behind the contact panel. */
+.root:has(.footer:focus-within) .footer {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .contact {
+    padding: 6rem 2.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root[data-reveal-footer="true"] .footer {
+    position: relative;
+  }
+}
