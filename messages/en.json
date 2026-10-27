@@ -1,0 +1,137 @@
+{
+  "Metadata": {
+    "siteName": "Kaique Geraldo",
+    "title": "Kaique Geraldo | Java Developer",
+    "description": "Kaique Geraldo, Java Developer at Code Group, assigned to Núclea. Java, Spring Boot and Full Stack development. Explore my projects and experience.",
+    "projects": "Projects",
+    "ogAlt": "Kaique Geraldo - Portfolio"
+  },
+  "Navigation": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "journey": "Journey",
+    "contact": "Contact Me"
+  },
+  "Hero": {
+    "role": "JAVA DEVELOPER · FULL STACK",
+    "greeting": "Java development for the financial sector, with a Full Stack perspective from backend to interface.",
+    "contactBtn": "Get in Touch",
+    "cvBtn": "Download my CV",
+    "social": "SOCIAL MEDIA",
+    "modalTitle": "Let's Talk?",
+    "modalDesc": "Choose the best way to discuss your project or idea.",
+    "whatsapp": "WhatsApp",
+    "email": "Send Email",
+    "headline": "Engineering behind every",
+    "headlineAccent": "solution.",
+    "employment": "Currently at <strong>Code Group</strong>, assigned to <strong>Núclea</strong>.",
+    "projectsBtn": "Explore projects",
+    "explore": "Discover my journey",
+    "navigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeModal": "Close contact",
+    "artDescription": "Overlapping cards highlighting Java and Spring Boot in front, React and Next.js in the middle, and AI agents with MCP behind.",
+    "artCaption": "BACKEND / INTERFACES / AI",
+    "interfaceLayer": "INTERFACE",
+    "servicesLayer": "SERVICES",
+    "dataLayer": "AGENTS",
+    "backToTop": "Back to top"
+  },
+  "AboutMe": {
+    "title": "About Me",
+    "subtitle": "Java backend, Full Stack perspective",
+    "aboutText1": "I am a Java Developer at Code Group, assigned to Núclea, working in the financial sector. I develop with Java and Spring Boot and bring a Full Stack perspective to connect APIs, integrations and interfaces with the needs of the people using the software.",
+    "aboutText2": "I pursue good outcomes by understanding the problem before building a solution. To me, excellence means attention to business rules, clear code and ownership of delivery, from development through maintenance. This is how I aim to build useful applications that can evolve consistently.",
+    "aboutText3": "I also use AI agents and system integrations through MCP in my development workflow. With SDD, I organize requirements and decisions into specifications that guide implementation. AI supports this work; critical thinking, review and validation remain part of my technical responsibility.",
+    "aboutText4": "My education began with a technical course in Software Development and includes participation in SP Skills 2024. I am now studying Software Engineering at Unimar, continuing to develop my backend, cloud and architecture skills and applying what I learn at work and in personal projects."
+  },
+  "Skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I use to build APIs, interfaces and applications.",
+    "previous": "Previous skills",
+    "next": "Next skills"
+  },
+  "Projects": {
+    "title": "Projects",
+    "subtitle": "My featured projects",
+    "seeAll": "See All",
+    "viewDetails": "Details"
+  },
+  "ProjectDetails": {
+    "title": "Project Details",
+    "subtitle": "Detailed information about the project",
+    "alert": "Your browser does not support sharing.",
+    "backBtn": "Back",
+    "shareBtn": "Share",
+    "duration": "Duration",
+    "status": "Status",
+    "visitSite": "Visit Site",
+    "viewOnGitHub": "View on GitHub",
+    "tabs": {
+      "description": "Description",
+      "technologies": "Technologies",
+      "details": "Details"
+    },
+    "contribution": "My contribution",
+    "context": "Context",
+    "allProjects": "All projects",
+    "spotlight": "Project spotlight",
+    "overview": "Overview",
+    "aboutProject": "About the project",
+    "stack": "Built with",
+    "projectSummary": "Project at a glance"
+  },
+  "ProjectsPage": {
+    "title": "My Projects",
+    "subtitle": "Check out some of the projects I've developed",
+    "backBtn": "Back to home"
+  },
+  "MyJourney": {
+    "title": "My Journey",
+    "subtitle": "My journey so far",
+    "education": "Education",
+    "experience": "Experience"
+  },
+  "ContactMe": {
+    "title": "Contact Me",
+    "subtitle": "For professional contacts, opportunities, or collaboration proposals, feel free to fill out the form.",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Type your message...",
+    "sendBtn": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! 🚀",
+    "errors": {
+      "nameMin": "Name must be at least 2 characters long",
+      "emailInvalid": "Please enter a valid email address",
+      "subjectMin": "Subject is too short",
+      "messageMin": "Message must be at least 10 characters long",
+      "tooManyRequests": "Too many requests! Please try again in 24h.",
+      "generic": "Error sending message.",
+      "network": "Connection error. Please check your internet."
+    }
+  },
+  "Footer": {
+    "role": "Java Developer",
+    "thankYou": "Thank you for visiting. I am always open to professional connections and technical discussions about software development. Feel free to contact me.",
+    "rights": " © 2025 Kaique Geraldo. All rights reserved."
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Oops! Page not found.",
+    "backBtn": "Back to home"
+  },
+  "ProjectNotFound": {
+    "title": "Project not found",
+    "message": "The project you are looking for doesn't exist or has been removed.",
+    "backBtn": "Back"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "pt-BR": "Mudar para Português",
+    "en": "Switch to English"
+  }
+}

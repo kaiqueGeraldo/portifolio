@@ -2,8 +2,6 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -11,8 +9,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#23648C",
-        secondary: "#BAD6D9",
+        primary: "#C4A9EE",
+        secondary: "#C5BECE",
+        surface: "#232127",
+        muted: "#B9B4C2",
       },
       fontFamily: {
         colgent: ["var(--font-colgent)", "sans-serif"],

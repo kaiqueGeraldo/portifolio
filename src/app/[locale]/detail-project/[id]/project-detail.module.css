@@ -1,0 +1,244 @@
+.page {
+  min-height: 100vh;
+  padding: 28px 24px 80px;
+  background: radial-gradient(ellipse at 0 0, #c4a9ee0a, transparent 55%);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+.back,
+.share {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  font-size: 14px;
+  color: var(--muted-foreground);
+  transition:
+    color 160ms,
+    background 160ms;
+}
+.share {
+  padding: 10px 14px;
+  border: 1px solid #ffffff1a;
+  border-radius: 12px;
+}
+.back:hover,
+.share:hover {
+  color: var(--accent);
+}
+.share:hover {
+  background: #c4a9ee12;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 48px;
+  padding-bottom: 52px;
+  border-bottom: 1px solid #ffffff18;
+}
+.intro {
+  min-width: 0;
+}
+.eyebrow,
+.sectionNumber {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+.intro h1 {
+  font-size: clamp(36px, 4.8vw, 64px);
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  line-height: 1.08;
+  margin: 20px 0 30px;
+  overflow-wrap: anywhere;
+}
+.cover {
+  position: relative;
+  aspect-ratio: 5 / 3;
+  border: 1px solid #ffffff1a;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition:
+    background 180ms,
+    border-color 180ms;
+}
+.primary {
+  background: var(--accent);
+  color: var(--background);
+  border: 1px solid transparent;
+}
+.primary:hover {
+  background: #d9c5f4;
+}
+.secondary {
+  border: 1px solid #ffffff26;
+  background: #ffffff04;
+}
+.secondary:hover {
+  background: #c4a9ee14;
+  border-color: #c4a9ee66;
+}
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 64px;
+  align-items: start;
+  padding-top: 48px;
+}
+.content h2 {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  margin: 12px 0 20px;
+}
+.description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--muted-foreground);
+}
+.contribution {
+  margin-top: 28px;
+  padding-left: 20px;
+  border-left: 2px solid #c4a9ee77;
+}
+.contribution h3 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contribution p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted-foreground);
+}
+.technologies {
+  margin-top: 42px;
+}
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.summary {
+  background: #ffffff03;
+  border: 1px solid #ffffff18;
+  border-radius: 22px;
+  padding: 24px;
+}
+.summary h2 {
+  margin: 0 0 22px;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+.summary dl {
+  display: grid;
+  gap: 22px;
+}
+.summary dl > div + div {
+  border-top: 1px solid #ffffff10;
+  padding-top: 20px;
+}
+.summary dt {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.summary dd {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.status {
+  display: inline-block;
+  color: #decdf4;
+  background: #c4a9ee12;
+  border: 1px solid #c4a9ee30;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+@media (max-width: 1000px) {
+  .hero {
+    gap: 28px;
+  }
+  .content {
+    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) 250px;
+  }
+  .techGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 800px) {
+  .page {
+    padding: 20px 20px 56px;
+  }
+  .navigation {
+    margin-bottom: 26px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 30px;
+  }
+  .intro h1 {
+    max-width: 620px;
+    letter-spacing: -1.5px;
+  }
+  .cover {
+    border-radius: 18px;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    padding-top: 32px;
+  }
+  .summary {
+    grid-row: 1;
+  }
+  .summary dl {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+  }
+  .summary dl > div + div {
+    border: none;
+    padding: 0;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back,
+  .share,
+  .primary,
+  .secondary {
+    transition: none;
+  }
+}

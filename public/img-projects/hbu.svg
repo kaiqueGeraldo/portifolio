@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#223449"/><stop offset="1" stop-color="#142131"/></linearGradient></defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<g fill="none" stroke="#b1d2e9" opacity=".13"><rect x="745" y="100" width="410" height="410" rx="90" transform="rotate(16 950 300)"/><rect x="795" y="150" width="310" height="310" rx="65" transform="rotate(16 950 300)"/><path d="M0 580H1200M0 630H1200"/></g>
+<path d="M915 220h70v85h85v70h-85v85h-70v-85h-85v-70h85Z" fill="#a9d0e8" opacity=".8"/>
+<rect x="70" y="74" width="58" height="58" rx="16" fill="#bad8ec"/><path d="M99 88v30m-15-15h30" stroke="#284760" stroke-width="6" stroke-linecap="round"/>
+<g font-family="Arial,sans-serif"><text x="70" y="292" fill="#f3f7fb" font-size="92" font-weight="700">HBU</text><text x="70" y="382" fill="#bad8ec" font-size="62" font-weight="700">Gestão Cirurgias</text><text x="74" y="638" fill="#aac3d8" font-size="21" letter-spacing="4">JAVA / SPRING BOOT / NEXT.JS</text></g>
+</svg>

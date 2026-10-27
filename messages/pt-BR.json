@@ -1,0 +1,137 @@
+{
+  "Metadata": {
+    "siteName": "Kaique Geraldo",
+    "title": "Kaique Geraldo | Desenvolvedor Java",
+    "description": "Kaique Geraldo, Desenvolvedor Java na Code Group, alocado na Núclea. Java, Spring Boot e desenvolvimento Full Stack. Conheça meus projetos e trajetória.",
+    "projects": "Projetos",
+    "ogAlt": "Kaique Geraldo - Portfólio"
+  },
+  "Navigation": {
+    "about": "Sobre Mim",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "journey": "Jornada",
+    "contact": "Contate-me"
+  },
+  "Hero": {
+    "role": "DESENVOLVEDOR JAVA · FULL STACK",
+    "greeting": "Desenvolvimento Java para o setor financeiro, com visão Full Stack do backend à interface.",
+    "contactBtn": "Entrar em Contato",
+    "cvBtn": "Baixar meu CV",
+    "social": "REDES SOCIAIS",
+    "modalTitle": "Vamos Conversar?",
+    "modalDesc": "Escolha a melhor forma para falarmos sobre seu projeto ou ideia.",
+    "whatsapp": "WhatsApp",
+    "email": "Enviar E-mail",
+    "headline": "Engenharia por trás de cada",
+    "headlineAccent": "solução.",
+    "employment": "Atualmente na <strong>Code Group</strong>, alocado na <strong>Núclea</strong>.",
+    "projectsBtn": "Explorar projetos",
+    "explore": "Conheça minha trajetória",
+    "navigation": "Navegação principal",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "closeModal": "Fechar contato",
+    "artDescription": "Cards sobrepostos destacando Java e Spring Boot à frente, React e Next.js ao centro e agentes de IA com MCP ao fundo.",
+    "artCaption": "BACKEND / INTERFACES / IA",
+    "interfaceLayer": "INTERFACE",
+    "servicesLayer": "SERVIÇOS",
+    "dataLayer": "AGENTES",
+    "backToTop": "Voltar ao topo"
+  },
+  "AboutMe": {
+    "title": "Sobre Mim",
+    "subtitle": "Backend Java, visão Full Stack",
+    "aboutText1": "Sou Desenvolvedor Java na Code Group, alocado na Núclea, com atuação no setor financeiro. Trabalho com Java e Spring Boot e levo uma visão Full Stack para conectar APIs, integrações e interfaces às necessidades de quem usa o software.",
+    "aboutText2": "Busco bons resultados entendendo o problema antes de escrever a solução. Para mim, excelência está no cuidado com as regras de negócio, na clareza do código e na responsabilidade pela entrega, do desenvolvimento à manutenção. É assim que procuro construir aplicações úteis e que possam evoluir com consistência.",
+    "aboutText3": "Também utilizo agentes de IA e integrações sistêmicas via MCP no meu fluxo de desenvolvimento. Com SDD, organizo requisitos e decisões em especificações para orientar a implementação. A IA amplia esse trabalho; análise crítica, revisão e validação continuam fazendo parte da minha responsabilidade técnica.",
+    "aboutText4": "Minha formação começou no curso técnico em Desenvolvimento de Sistemas e inclui a participação na SP Skills 2024. Hoje curso Engenharia de Software na Unimar e sigo aprofundando minha prática em backend, nuvem e arquitetura, aplicando esse aprendizado no trabalho e nos meus projetos."
+  },
+  "Skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologias que utilizo para construir APIs, interfaces e aplicações.",
+    "previous": "Habilidades anteriores",
+    "next": "Próximas habilidades"
+  },
+  "Projects": {
+    "title": "Projetos",
+    "subtitle": "Meus projetos de destaque",
+    "seeAll": "Ver Todos",
+    "viewDetails": "Detalhes"
+  },
+  "ProjectDetails": {
+    "title": "Detalhes do Projeto",
+    "subtitle": "Informações detalhadas sobre o projeto",
+    "alert": "Seu navegador não suporta compartilhamento.",
+    "backBtn": "Voltar",
+    "shareBtn": "Compartilhar",
+    "duration": "Duração",
+    "status": "Status",
+    "visitSite": "Visitar Site",
+    "viewOnGitHub": "Ver no GitHub",
+    "tabs": {
+      "description": "Descrição",
+      "technologies": "Tecnologias",
+      "details": "Detalhes"
+    },
+    "contribution": "Minha contribuição",
+    "context": "Contexto",
+    "allProjects": "Todos os projetos",
+    "spotlight": "Projeto em foco",
+    "overview": "Visão geral",
+    "aboutProject": "Sobre o projeto",
+    "stack": "Construção",
+    "projectSummary": "Ficha do projeto"
+  },
+  "ProjectsPage": {
+    "title": "Meus Projetos",
+    "subtitle": "Confira alguns dos projetos que desenvolvi",
+    "backBtn": "Voltar ao início"
+  },
+  "MyJourney": {
+    "title": "Minha Jornada",
+    "subtitle": "Minha trajetória até o momento",
+    "education": "Educação",
+    "experience": "Experiência"
+  },
+  "ContactMe": {
+    "title": "Contate-me",
+    "subtitle": "Para contatos profissionais, oportunidades ou propostas de colaboração, sinta-se à vontade para preencher o formulário.",
+    "namePlaceholder": "Nome",
+    "emailPlaceholder": "E-mail",
+    "subjectPlaceholder": "Assunto",
+    "messagePlaceholder": "Digite sua mensagem...",
+    "sendBtn": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso! 🚀",
+    "errors": {
+      "nameMin": "O nome precisa ter pelo menos 2 caracteres",
+      "emailInvalid": "Digite um e-mail válido",
+      "subjectMin": "O assunto é muito curto",
+      "messageMin": "Sua mensagem deve ter pelo menos 10 caracteres",
+      "tooManyRequests": "Muitas tentativas! Tente novamente em 24h.",
+      "generic": "Erro ao enviar mensagem.",
+      "network": "Erro de conexão. Verifique sua internet."
+    }
+  },
+  "Footer": {
+    "role": "Desenvolvedor Java",
+    "thankYou": "Obrigado pela visita. Estou sempre aberto a conexões profissionais e discussões técnicas sobre desenvolvimento de software. Sinta-se à vontade para me contatar.",
+    "rights": "© 2025 Kaique Geraldo. Todos os direitos reservados."
+  },
+  "NotFound": {
+    "title": "404",
+    "message": "Ops! Página não encontrada.",
+    "backBtn": "Voltar para o início"
+  },
+  "ProjectNotFound": {
+    "title": "Projeto não encontrado",
+    "message": "O projeto que você está procurando não existe ou foi removido.",
+    "backBtn": "Voltar"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma",
+    "pt-BR": "Mudar para Português",
+    "en": "Switch to English"
+  }
+}

@@ -13,6 +13,17 @@
 # testing
 /coverage
 
+# Local document generation outputs (published PDFs live in public/curriculo)
+/tmp/
+/output/
+
+# Local planning and historical notes
+/docs/ARQUITETURA_DO_SISTEMA.md
+/docs/DESIGN.md
+/docs/OBJETIVO_DO_SISTEMA.md
+/docs/ROADMAP.md
+/docs/SDD-AJUSTES-PORTFOLIO.md
+
 # next.js
 /.next/
 /out/

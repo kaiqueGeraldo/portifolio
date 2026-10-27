@@ -1,0 +1,247 @@
+.scene {
+  position: relative;
+  height: 500px;
+  min-width: 0;
+  isolation: isolate;
+  perspective: 1200px;
+}
+.glow {
+  position: absolute;
+  inset: 0 -10%;
+  background: radial-gradient(ellipse at center, #b095ea22, transparent 65%);
+  pointer-events: none;
+}
+.orbit,
+.orbitOuter {
+  position: absolute;
+  inset: 16% 1%;
+  border: 1px solid #c5acef1b;
+  border-radius: 50%;
+  transform: rotate(-34deg);
+  pointer-events: none;
+}
+.orbitOuter {
+  inset: 7% -8%;
+  border-color: #c5acef0c;
+}
+.stack {
+  position: absolute;
+  inset: 0;
+  perspective: 1200px;
+}
+.layer {
+  position: absolute;
+  left: 11%;
+  width: 77%;
+  height: 215px;
+  border: 1px solid #d6bfff45;
+  border-radius: 17px;
+  background: linear-gradient(130deg, #676071bb, #29282feb);
+  box-shadow:
+    0 26px 45px #0005,
+    inset 0 1px #ffffff25;
+  backdrop-filter: blur(14px);
+  padding: 22px;
+  transform: rotateX(30deg) rotateZ(-14deg);
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+  overflow: hidden;
+}
+.layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 10%,
+    #efe2ff20 45%,
+    transparent 75%
+  );
+  translate: -100% 0;
+  transition: translate 650ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .layer:hover {
+    border-color: #ddc9ff99;
+    box-shadow:
+      0 30px 50px #0006,
+      0 0 30px #c4a9ee16,
+      inset 0 1px #ffffff40;
+  }
+  .layer:hover::after {
+    translate: 100% 0;
+  }
+}
+.layerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #e1d4f7;
+}
+.layerFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: #eee7f9;
+}
+.data {
+  top: 250px;
+  z-index: 1;
+  background: linear-gradient(130deg, #39343fd9, #202025ed);
+}
+.services {
+  top: 32px;
+  z-index: 3;
+  background: linear-gradient(130deg, #4c4457df, #29262fe8);
+}
+.interface {
+  top: 141px;
+  z-index: 2;
+}
+.dots {
+  display: flex;
+  gap: 5px;
+}
+.dots i {
+  width: 5px;
+  height: 5px;
+  background: #dfc8ff99;
+  border-radius: 50%;
+}
+.interfaceBody {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  height: 117px;
+}
+.interfaceBody img {
+  filter: saturate(0.4);
+}
+.interfaceLines {
+  flex: 1;
+  display: grid;
+  gap: 12px;
+}
+.interfaceLines div {
+  background: #d9c7f228;
+  height: 7px;
+  border-radius: 6px;
+}
+.interfaceLines div:first-child {
+  width: 60%;
+  background: #d9c7f27a;
+}
+.interfaceLines div:last-child {
+  width: 80%;
+}
+.code {
+  font-size: 12px;
+  line-height: 1.65;
+  height: 117px;
+  padding-top: 10px;
+  font-family: monospace;
+  color: #e2dce9;
+}
+.code > span:first-child {
+  color: #c6a7f5;
+}
+.codeIndent {
+  padding-left: 16px;
+}
+.dataBody {
+  height: 117px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+.dataBody span {
+  color: #d7dce3;
+  font-size: 28px;
+  text-align: center;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  right: 7%;
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #aaa0b7;
+}
+@media (min-width: 701px) and (max-width: 999px) {
+  .layer {
+    width: 84%;
+    left: 8%;
+    padding: 17px;
+  }
+  .layerHeader {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+  .layerFooter {
+    font-size: 13px;
+  }
+}
+@media (max-width: 700px) {
+  .scene {
+    height: 440px;
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+  }
+  .layer {
+    height: 185px;
+    left: 8%;
+    width: 84%;
+    padding: 18px;
+  }
+  .interface {
+    top: 120px;
+  }
+  .services {
+    top: 20px;
+  }
+  .data {
+    top: 220px;
+  }
+  .interfaceBody,
+  .code,
+  .dataBody {
+    height: 97px;
+  }
+  .layerHeader {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+  .layerFooter {
+    font-size: 13px;
+  }
+  .code {
+    font-size: 11px;
+  }
+  .caption {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .layer,
+  .layer::after {
+    transition: none;
+  }
+  .layer::after {
+    display: none;
+  }
+  .layer {
+    transform: rotateZ(-10deg) !important;
+  }
+}

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background-start: #bad6d9;
-  --background-end: #23648c;
-  --foreground: #171717;
-}
-
-.font-poppins {
-  font-family: var(--font-poppins);
+  color-scheme: dark;
+  --background: #161619;
+  --background-start: #161619;
+  --background-end: #27232f;
+  --foreground: #f1eef5;
+  --muted-foreground: #b9b4c2;
+  --accent: #c4a9ee;
 }
 
 .font-light {
@@ -28,15 +28,37 @@
 }
 
 body {
-  background: linear-gradient(
-    to top left,
-    var(--background-start),
-    var(--background-end)
-  );
+  position: relative;
+  background: var(--background);
   color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer base {
+  html {
+    position: relative;
+    scroll-behavior: smooth;
+  }
+  html.lenis {
+    scroll-behavior: auto;
+  }
+  html:has(dialog[open]),
+  html:has(dialog[open]) body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  section[id],
+  div[id="contact-me"] {
+    scroll-margin-top: 100px;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+  }
+  ::selection {
+    background: #c4a9ee;
+    color: #161619;
+  }
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -47,6 +69,12 @@ body {
     background: var(--background-end);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #1b4d6f;
+    background: #736581;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
